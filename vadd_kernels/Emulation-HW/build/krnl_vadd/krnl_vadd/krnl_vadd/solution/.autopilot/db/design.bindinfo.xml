@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln51_fu_138_p2" SOURCE="/home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51" VARIABLE="icmp_ln51" MODULE="krnl_vadd_Pipeline_vadd1" LOOP="vadd1" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_fu_144_p2" SOURCE="/home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51" VARIABLE="add_ln51" MODULE="krnl_vadd_Pipeline_vadd1" LOOP="vadd1" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln55_fu_154_p2" SOURCE="/home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55" VARIABLE="add_ln55" MODULE="krnl_vadd_Pipeline_vadd1" LOOP="vadd1" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln55_1_fu_170_p2" SOURCE="/home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55" VARIABLE="add_ln55_1" MODULE="krnl_vadd_Pipeline_vadd1" LOOP="vadd1" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln55_2_fu_196_p2" SOURCE="/home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55" VARIABLE="add_ln55_2" MODULE="krnl_vadd_Pipeline_vadd1" LOOP="vadd1" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln51_fu_107_p2" SOURCE="/home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51" VARIABLE="icmp_ln51" MODULE="krnl_vadd" LOOP="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

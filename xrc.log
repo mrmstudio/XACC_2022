@@ -1,0 +1,26 @@
+Tue Jan 25 14:57:20 2022: Server was asked to start on port: '39234'
+Tue Jan 25 14:57:20 2022: Server is using token UUID: '81131ee2-4bb5-4c9f-9a23-dc04be8fbbdc'
+Tue Jan 25 14:57:20 2022: Attempting to start server on port '39234'
+Tue Jan 25 14:57:20 2022: XRC main fifo: created main fifo '/tmp/xrcmain81131ee2-4bb5-4c9f-9a23-dc04be8fbbdc', fd read = 11
+Tue Jan 25 14:57:20 2022: Running Rule Check Server
+Tue Jan 25 14:57:20 2022: Version 1.6.1
+Tue Jan 25 14:57:21 2022: Rule Check Server: Accepted socket connection from client
+Tue Jan 25 14:57:21 2022: EXCHANGE_TOKEN received, server token: 81131ee2-4bb5-4c9f-9a23-dc04be8fbbdc, passed token: 81131ee2-4bb5-4c9f-9a23-dc04be8fbbdc
+Tue Jan 25 15:02:59 2022: SESSION_MGR: creating session with session uuid: 'ceb52f0b-c239-4c36-a861-248c08066c17' and name 'Emulation-SW'
+Tue Jan 25 15:02:59 2022: SESSION_MGR: closing session for UUID 'ceb52f0b-c239-4c36-a861-248c08066c17' with name 'Emulation-SW'
+Tue Jan 25 15:02:59 2022: SESSION_MGR: creating session with session uuid: 'a67527ab-7a02-490f-b947-0f23df4391bd' and name 'Emulation-HW'
+Tue Jan 25 15:02:59 2022: SESSION_MGR: closing session for UUID 'a67527ab-7a02-490f-b947-0f23df4391bd' with name 'Emulation-HW'
+Tue Jan 25 15:02:59 2022: SESSION_MGR: creating session with session uuid: 'be23c181-8470-453a-91b2-eeea7361846f' and name 'Hardware'
+Tue Jan 25 15:02:59 2022: SESSION_MGR: closing session for UUID 'be23c181-8470-453a-91b2-eeea7361846f' with name 'Hardware'
+Tue Jan 25 15:03:55 2022: SESSION_MGR: creating session with session uuid: '6bc22c51-ff00-4d91-965e-cdd3f3d657cc' and name 'Emulation-SW'
+Tue Jan 25 15:03:55 2022: SESSION_MGR: closing session for UUID '6bc22c51-ff00-4d91-965e-cdd3f3d657cc' with name 'Emulation-SW'
+Tue Jan 25 15:03:55 2022: SESSION_MGR: creating session with session uuid: 'd5c8a04b-0884-490f-9852-a2ca686ed848' and name 'Emulation-SW'
+Tue Jan 25 15:04:04 2022: SESSION_MGR: closing session for UUID 'd5c8a04b-0884-490f-9852-a2ca686ed848' with name 'Emulation-SW'
+Tue Jan 25 15:04:04 2022: SESSION_MGR: creating session with session uuid: 'dc2f8a51-9e85-4923-8f1f-181b492ae6e1' and name 'Emulation-SW'
+Tue Jan 25 15:04:04 2022: SESSION_MGR: closing session for UUID 'dc2f8a51-9e85-4923-8f1f-181b492ae6e1' with name 'Emulation-SW'
+Tue Jan 25 15:13:54 2022: STOP_SERVER received, server token: 81131ee2-4bb5-4c9f-9a23-dc04be8fbbdc, passed token: 81131ee2-4bb5-4c9f-9a23-dc04be8fbbdc
+Tue Jan 25 15:13:54 2022: Socket received request to stop server.
+Tue Jan 25 15:13:54 2022: SERVER: destructor for server bound to port 39234
+Tue Jan 25 15:13:54 2022: XRC main fifo: Good unlink of /tmp/xrcmain81131ee2-4bb5-4c9f-9a23-dc04be8fbbdc
+Tue Jan 25 15:13:54 2022: Server exiting with status 0.
+Tue Jan 25 15:13:54 2022: Closing log file.

@@ -1,0 +1,271 @@
+Begin Function 'krnl_vadd_Pipeline_vadd1'
+
+RTL state condition: (1'b1 == 1'b1)
+# ST_3
+local trunc_ln55 <trunc_55> <integer> <> 'trunc' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+trunc_ln55 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: trunc_ln55_reg_919[31:0] lv
+
+local lshr_ln <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln_reg_924[31:0] lv
+
+local trunc_ln55_1 <trunc_55> <integer> <> 'trunc' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+trunc_ln55_1 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: trunc_ln55_1_reg_929[31:0] lv
+
+local lshr_ln55_1 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_1 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_1_reg_934[31:0] lv
+
+local lshr_ln55_s <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_s /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_s_reg_939[31:0] lv
+
+local lshr_ln55_12 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_12 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_12_reg_944[31:0] lv
+
+local lshr_ln55_2 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_2 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_2_reg_949[31:0] lv
+
+local lshr_ln55_15 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_15 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_15_reg_954[31:0] lv
+
+local lshr_ln55_3 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_3 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_3_reg_959[31:0] lv
+
+local lshr_ln55_16 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_16 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_16_reg_964[31:0] lv
+
+local lshr_ln55_4 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_4 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_4_reg_969[31:0] lv
+
+local lshr_ln55_17 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_17 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_17_reg_974[31:0] lv
+
+local lshr_ln55_5 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_5 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_5_reg_979[31:0] lv
+
+local lshr_ln55_18 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_18 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_18_reg_984[31:0] lv
+
+local lshr_ln55_6 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_6 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_6_reg_989[31:0] lv
+
+local lshr_ln55_19 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_19 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_19_reg_994[31:0] lv
+
+local lshr_ln55_7 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_7 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_7_reg_999[31:0] lv
+
+local lshr_ln55_20 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_20 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_20_reg_1004[31:0] lv
+
+local lshr_ln55_8 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_8 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_8_reg_1009[31:0] lv
+
+local lshr_ln55_21 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_21 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_21_reg_1014[31:0] lv
+
+local lshr_ln55_9 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_9 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_9_reg_1019[31:0] lv
+
+local lshr_ln55_22 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_22 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_22_reg_1024[31:0] lv
+
+local lshr_ln55_10 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_10 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_10_reg_1029[31:0] lv
+
+local lshr_ln55_23 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_23 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_23_reg_1034[31:0] lv
+
+local lshr_ln55_11 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_11 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_11_reg_1039[31:0] lv
+
+local lshr_ln55_24 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_24 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_24_reg_1044[31:0] lv
+
+local lshr_ln55_25 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_25 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_25_reg_1049[31:0] lv
+
+local lshr_ln55_26 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_26 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_26_reg_1054[31:0] lv
+
+local lshr_ln55_13 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_13 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_13_reg_1059[31:0] lv
+
+local lshr_ln55_27 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_27 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_27_reg_1064[31:0] lv
+
+local lshr_ln55_14 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_14 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_14_reg_1069[31:0] lv
+
+local lshr_ln55_28 <partselect_55> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+lshr_ln55_28 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: lshr_ln55_28_reg_1074[31:0] lv
+
+# ST_4
+local add_ln55 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_reg_1084[31:0] lv
+
+local add_ln55_1 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_1 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_1_reg_1089[31:0] lv
+
+local add_ln55_2 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_2 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_2_reg_1094[31:0] lv
+
+local add_ln55_3 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_3 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_3_reg_1099[31:0] lv
+
+local add_ln55_4 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_4 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_4_reg_1104[31:0] lv
+
+local add_ln55_5 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_5 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_5_reg_1109[31:0] lv
+
+local add_ln55_6 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_6 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_6_reg_1114[31:0] lv
+
+local add_ln55_7 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_7 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_7_reg_1119[31:0] lv
+
+local add_ln55_8 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_8 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_8_reg_1124[31:0] lv
+
+local add_ln55_9 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_9 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_9_reg_1129[31:0] lv
+
+local add_ln55_10 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_10 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_10_reg_1134[31:0] lv
+
+local add_ln55_11 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_11 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_11_reg_1139[31:0] lv
+
+local add_ln55_12 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_12 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_12_reg_1144[31:0] lv
+
+local add_ln55_13 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_13 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_13_reg_1149[31:0] lv
+
+local add_ln55_14 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_14 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_14_reg_1154[31:0] lv
+
+local add_ln55_15 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_15 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_15_reg_1159[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_1
+local zext_ln52_cast <> <integer> <> 'zext' <>
+reg: zext_ln52_cast_reg_820[63:0] lv
+
+# ST_2
+local icmp_ln52 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_reg_855[0:0] lv
+
+local icmp_ln52_1 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_1 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_1_reg_859[0:0] lv
+
+local icmp_ln52_2 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_2 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_2_reg_863[0:0] lv
+
+local icmp_ln52_3 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_3 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_3_reg_867[0:0] lv
+
+local icmp_ln52_4 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_4 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_4_reg_871[0:0] lv
+
+local icmp_ln52_5 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_5 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_5_reg_875[0:0] lv
+
+local icmp_ln52_6 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_6 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_6_reg_879[0:0] lv
+
+local icmp_ln52_7 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_7 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_7_reg_883[0:0] lv
+
+local icmp_ln52_8 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_8 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_8_reg_887[0:0] lv
+
+local icmp_ln52_9 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_9 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_9_reg_891[0:0] lv
+
+local icmp_ln52_10 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_10 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_10_reg_895[0:0] lv
+
+local icmp_ln52_11 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_11 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_11_reg_899[0:0] lv
+
+local icmp_ln52_12 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_12 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_12_reg_903[0:0] lv
+
+local icmp_ln52_13 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_13 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_13_reg_907[0:0] lv
+
+local icmp_ln52_14 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_14 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_14_reg_911[0:0] lv
+
+local icmp_ln52_15 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52_15 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_15_reg_915[0:0] lv
+
+
+End Function 'krnl_vadd_Pipeline_vadd1'
+

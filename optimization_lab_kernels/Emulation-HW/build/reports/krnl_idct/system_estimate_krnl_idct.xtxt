@@ -1,0 +1,51 @@
+===============================================================================
+Version:    v++ v2021.1 (64-bit)
+Build:      SW Build 3246112 on 2021-06-09-14:19:56
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Tue Jan 25 07:52:00 2022
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             krnl_idct
+Target Device:           xilinx:aws-vu9p-f1:shell-v04261818:201920.2
+Target Clock:            250.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+krnl_idct    c     fpga0:OCL_REGION_0  krnl_idct       1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     krnl_idct
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                         Target Frequency  Estimated Frequency
+------------  -----------  ----------------------------------  ----------------  -------------------
+krnl_idct_1   krnl_idct    krnl_idct_Pipeline_loop_rd_blocks   250               342.465759
+krnl_idct_1   krnl_idct    krnl_idct_Pipeline_loop_rd_blocks1  250               342.465759
+krnl_idct_1   krnl_idct    execute                             250               294.81131
+krnl_idct_1   krnl_idct    krnl_idct_Pipeline_loop_wr_blocks   250               342.465759
+krnl_idct_1   krnl_idct    krnl_idct                           250               294.81131
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                         Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  ----------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+krnl_idct_1   krnl_idct    krnl_idct_Pipeline_loop_rd_blocks   74              74             74            74              0.296 us         0.296 us        0.296 us
+krnl_idct_1   krnl_idct    krnl_idct_Pipeline_loop_rd_blocks1  2051            2051           2051          2051            8.204 us         8.204 us        8.204 us
+krnl_idct_1   krnl_idct    execute                             2071            2071           2071          2071            8.284 us         8.284 us        8.284 us
+krnl_idct_1   krnl_idct    krnl_idct_Pipeline_loop_wr_blocks   2051            2051           2051          2051            8.204 us         8.204 us        8.204 us
+krnl_idct_1   krnl_idct    krnl_idct                           2151 ~ 6394     2150           4272          6393            8.600 us         17.088 us       25.572 us
+
+Area Information
+Compute Unit  Kernel Name  Module Name                         FF     LUT    DSP  BRAM  URAM
+------------  -----------  ----------------------------------  -----  -----  ---  ----  ----
+krnl_idct_1   krnl_idct    krnl_idct_Pipeline_loop_rd_blocks   589    418    0    0     0
+krnl_idct_1   krnl_idct    krnl_idct_Pipeline_loop_rd_blocks1  550    129    0    0     0
+krnl_idct_1   krnl_idct    execute                             34292  25944  0    0     0
+krnl_idct_1   krnl_idct    krnl_idct_Pipeline_loop_wr_blocks   550    131    0    0     0
+krnl_idct_1   krnl_idct    krnl_idct                           44247  34802  0    120   0
+-------------------------------------------------------------------------------

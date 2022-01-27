@@ -1,0 +1,23 @@
+{
+    "kernelContainerValues": [
+        "krnl_idct:xo"
+    ],
+    "profileDataTransferValues": [
+        "krnl_idct:krnl_idct_1:block:all",
+        "krnl_idct:krnl_idct_1:q:all",
+        "krnl_idct:krnl_idct_1:voutp:all"
+    ],
+    "compile": "false",
+    "debug": "false",
+    "exportScript": "false",
+    "gccHostCompile": "false",
+    "generateEstimateRpt": "false",
+    "keepSolution": "false",
+    "link": "false",
+    "logDir": "\/home\/centos\/workspace\/optimization_lab_system_hw_link\/Emulation-HW\/binary_container_1.build\/logs\/link",
+    "package": "false",
+    "reportDir": "\/home\/centos\/workspace\/optimization_lab_system_hw_link\/Emulation-HW\/binary_container_1.build\/reports\/link",
+    "saveTemps": "false",
+    "verbose": "false",
+    "vplNoIpCache": "false"
+}

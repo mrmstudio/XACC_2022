@@ -1,0 +1,16 @@
+Begin Function 'krnl_idct_Pipeline_loop_rd_blocks1'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_1
+local icmp_ln223 <icmp_223> <integer> <Comparator> 'icmp' </home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223>
+icmp_ln223 /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223
+reg: icmp_ln223_reg_121[0:0] lv
+
+# ST_2
+local gmem0_addr_read <read_174> <integer> <> 'read' </opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:174>
+gmem0_addr_read /opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:174
+reg: gmem0_addr_read_reg_125[511:0] lv
+
+
+End Function 'krnl_idct_Pipeline_loop_rd_blocks1'
+

@@ -1,0 +1,33 @@
+Begin Function 'krnl_vadd'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local icmp_ln51 <icmp_51> <integer> <Comparator> 'icmp' </home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51>
+icmp_ln51 /home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51
+reg: icmp_ln51_reg_167[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local trunc_ln51 <trunc_51> <integer> <> 'trunc' </home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51>
+trunc_ln51 /home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51
+reg: trunc_ln51_reg_171[30:0] lv
+
+local trunc_ln <partselect_51> <integer> <> 'partselect' </home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51>
+trunc_ln /home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51
+reg: trunc_ln_reg_176[61:0] lv
+
+local trunc_ln51_1 <partselect_51> <integer> <> 'partselect' </home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51>
+trunc_ln51_1 /home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51
+reg: trunc_ln51_1_reg_181[61:0] lv
+
+local trunc_ln51_2 <partselect_51> <integer> <> 'partselect' </home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51>
+trunc_ln51_2 /home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51
+reg: trunc_ln51_2_reg_186[61:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state4)
+# ST_4
+
+End Function 'krnl_vadd'
+

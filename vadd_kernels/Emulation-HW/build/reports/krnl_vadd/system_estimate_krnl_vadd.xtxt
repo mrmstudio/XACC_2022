@@ -1,0 +1,42 @@
+===============================================================================
+Version:    v++ v2021.1 (64-bit)
+Build:      SW Build 3246112 on 2021-06-09-14:19:56
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Mon Jan 24 11:45:50 2022
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             krnl_vadd
+Target Device:           xilinx:aws-vu9p-f1:shell-v04261818:201920.2
+Target Clock:            250.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+krnl_vadd    c     fpga0:OCL_REGION_0  krnl_vadd       1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     krnl_vadd
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name               Target Frequency  Estimated Frequency
+------------  -----------  ------------------------  ----------------  -------------------
+krnl_vadd_1   krnl_vadd    krnl_vadd_Pipeline_vadd1  250               342.465759
+krnl_vadd_1   krnl_vadd    krnl_vadd                 250               342.465759
+
+Latency Information
+Compute Unit  Kernel Name  Module Name               Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  ------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+krnl_vadd_1   krnl_vadd    krnl_vadd_Pipeline_vadd1  8267            8267           8267          8267            33.068 us        33.068 us       33.068 us
+krnl_vadd_1   krnl_vadd    krnl_vadd                 3 ~ 8339        2              4170          8338            8.000 ns         16.680 us       33.352 us
+
+Area Information
+Compute Unit  Kernel Name  Module Name               FF    LUT   DSP  BRAM  URAM
+------------  -----------  ------------------------  ----  ----  ---  ----  ----
+krnl_vadd_1   krnl_vadd    krnl_vadd_Pipeline_vadd1  397   392   0    0     0
+krnl_vadd_1   krnl_vadd    krnl_vadd                 1491  2016  0    2     0
+-------------------------------------------------------------------------------

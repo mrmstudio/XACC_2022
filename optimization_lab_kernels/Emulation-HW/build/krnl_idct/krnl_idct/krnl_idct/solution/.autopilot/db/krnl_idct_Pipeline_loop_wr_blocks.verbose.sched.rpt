@@ -1,0 +1,153 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_idct_Pipeline_loop_wr_blocks'
+================================================================
+* Date:           Tue Jan 25 07:51:10 2022
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+* Project:        krnl_idct
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.920 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+------+------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
+    |   min   |   max   |    min   |    max   |  min |  max |   Type  |
+    +---------+---------+----------+----------+------+------+---------+
+    |     2051|     2051|  8.204 us|  8.204 us|  2051|  2051|       no|
+    +---------+---------+----------+----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_wr_blocks  |     2049|     2049|         3|          1|          1|  2048|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.26>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 6 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%mul_i_i_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %mul_i_i"   --->   Operation 7 'read' 'mul_i_i_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sext_ln297_read = read i58 @_ssdm_op_Read.ap_auto.i58, i58 %sext_ln297"   --->   Operation 8 'read' 'sext_ln297_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln297_cast = sext i58 %sext_ln297_read"   --->   Operation 9 'sext' 'sext_ln297_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %ivoutp, void @empty_9, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem2, void @empty_11, i32 0, i32 0, void @empty_12, i32 64, i32 0, void @empty_15, void @empty_16, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.38ns)   --->   "%store_ln0 = store i32 0, i32 %i"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i_1 = load i32 %i" [/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297]   --->   Operation 14 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.85ns)   --->   "%icmp_ln297 = icmp_eq  i32 %i_1, i32 %mul_i_i_read" [/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297]   --->   Operation 15 'icmp' 'icmp_ln297' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.88ns)   --->   "%add_ln297 = add i32 %i_1, i32 1" [/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297]   --->   Operation 16 'add' 'add_ln297' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln297 = br i1 %icmp_ln297, void %.split, void %_Z18krnl_idct_dataflowPK6ap_intILi512EEPK7ap_uintILi512EEPS0_ij.exit.loopexit.exitStub" [/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297]   --->   Operation 17 'br' 'br_ln297' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.38ns)   --->   "%store_ln297 = store i32 %add_ln297, i32 %i" [/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297]   --->   Operation 18 'store' 'store_ln297' <Predicate = (!icmp_ln297)> <Delay = 0.38>
+
+State 2 <SV = 1> <Delay = 1.23>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%gmem2_addr = getelementptr i512 %gmem2, i64 %sext_ln297_cast" [/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297]   --->   Operation 19 'getelementptr' 'gmem2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (1.23ns)   --->   "%tmp = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %ivoutp" [/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 20 'read' 'tmp' <Predicate = (!icmp_ln297)> <Delay = 1.23> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 512> <FIFO>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 26 'ret' 'ret_ln0' <Predicate = (icmp_ln297)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.92>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specpipeline_ln297 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_12" [/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297]   --->   Operation 21 'specpipeline' 'specpipeline_ln297' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%speclooptripcount_ln297 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 2048, i64 2048, i64 2048" [/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297]   --->   Operation 22 'speclooptripcount' 'speclooptripcount_ln297' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specloopname_ln297 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297]   --->   Operation 23 'specloopname' 'specloopname_ln297' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (2.92ns)   --->   "%write_ln300 = write void @_ssdm_op_Write.m_axi.p1i512, i512 %gmem2_addr, i512 %tmp, i64 18446744073709551615" [/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:300]   --->   Operation 24 'write' 'write_ln300' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 5> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 25 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 1.08ns.
+
+ <State 1>: 1.27ns
+The critical path consists of the following:
+	'alloca' operation ('i') [5]  (0 ns)
+	'load' operation ('i', /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297) on local variable 'i' [14]  (0 ns)
+	'add' operation ('add_ln297', /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297) [17]  (0.88 ns)
+	'store' operation ('store_ln297', /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297) of variable 'add_ln297', /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297 on local variable 'i' [25]  (0.387 ns)
+
+ <State 2>: 1.24ns
+The critical path consists of the following:
+	fifo read operation ('tmp', /opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:145) on port 'ivoutp' (/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:145) [23]  (1.24 ns)
+
+ <State 3>: 2.92ns
+The critical path consists of the following:
+	bus write operation ('write_ln300', /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:300) on port 'gmem2' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:300) [24]  (2.92 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

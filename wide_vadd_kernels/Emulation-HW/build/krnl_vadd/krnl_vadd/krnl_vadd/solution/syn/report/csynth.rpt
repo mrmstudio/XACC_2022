@@ -1,0 +1,108 @@
+
+
+================================================================
+== Synthesis Summary Report of 'krnl_vadd'
+================================================================
++ General Information: 
+    * Date:           Mon Jan 24 15:56:37 2022
+    * Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+    * Project:        krnl_vadd
+    * Solution:       solution (Vitis Kernel Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu9p-flgb2104-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |                 Modules                |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |    |            |            |     |
+    |                 & Loops                |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |     LUT    | URAM|
+    +----------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |+ krnl_vadd                             |  Timing|  -0.00|      401|  1.604e+03|         -|      402|     -|        no|  60 (1%)|   -|  5444 (~0%)|  7200 (~0%)|    -|
+    | + grp_krnl_vadd_Pipeline_vadd1_fu_131  |  Timing|  -0.00|      260|  1.040e+03|         -|      260|     -|        no|        -|   -|  1672 (~0%)|  2200 (~0%)|    -|
+    |  o vadd1                               |       -|   2.92|      258|  1.032e+03|         4|        1|   256|       yes|        -|   -|           -|           -|    -|
+    +----------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 32 -> 512  | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
+| m_axi_gmem1 | 32 -> 512  | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* REGISTER
++-------------+----------+
+| Interface   | Bitwidth |
++-------------+----------+
+| event_done  | 1        |
+| event_start | 1        |
++-------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------+
+| Argument | Direction | Datatype    |
++----------+-----------+-------------+
+| in1      | inout     | int const * |
+| in2      | in        | int const * |
+| out      | inout     | int*        |
+| elements | in        | int         |
++----------+-----------+-------------+
+
+* SW-to-HW Mapping
++----------+------------------------+-----------+----------+-----------------------+
+| Argument | HW Name                | HW Type   | HW Usage | HW Info               |
++----------+------------------------+-----------+----------+-----------------------+
+| in1      | m_axi_gmem0            | interface |          |                       |
+| in1      | s_axi_control in1_1    | register  | offset   | offset=0x10, range=32 |
+| in1      | s_axi_control in1_2    | register  | offset   | offset=0x14, range=32 |
+| in2      | m_axi_gmem1            | interface |          |                       |
+| in2      | s_axi_control in2_1    | register  | offset   | offset=0x1c, range=32 |
+| in2      | s_axi_control in2_2    | register  | offset   | offset=0x20, range=32 |
+| out      | m_axi_gmem0            | interface |          |                       |
+| out      | s_axi_control out_r_1  | register  | offset   | offset=0x28, range=32 |
+| out      | s_axi_control out_r_2  | register  | offset   | offset=0x2c, range=32 |
+| elements | s_axi_control elements | register  |          | offset=0x34, range=32 |
++----------+------------------------+-----------+----------+-----------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+* Burst Summary
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
+| HW Interface | Message                                                                                                                                                                                                                         | Location                                                        |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
+| m_axi_gmem0  | Multiple burst reads of variable length and bit width 512. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.  | /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52:5 |
+| m_axi_gmem1  | Multiple burst reads of variable length and bit width 512. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.  | /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52:5 |
+| m_axi_gmem0  | Multiple burst writes of variable length and bit width 512. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. | /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52:5 |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
+
+

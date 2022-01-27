@@ -1,0 +1,24 @@
+Mon Jan 24 11:45:56 2022: Running xcd server. This server was built by gradle.
+Mon Jan 24 11:45:56 2022: Server was asked to start on port: '33099'
+Mon Jan 24 11:45:56 2022: Server is using token UUID: 'a0f9e89c-ea9f-42bf-b88d-9f50a30cb704'
+Mon Jan 24 11:45:56 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Mon Jan 24 11:45:56 2022: Attempting to start server on port '33099'
+Mon Jan 24 11:45:56 2022: XCD main fifo: created main fifo '/tmp/xcdmaina0f9e89c-ea9f-42bf-b88d-9f50a30cb704', fd read = 14
+Mon Jan 24 11:45:56 2022: Running Dispatch Server
+Mon Jan 24 11:45:56 2022: Version 2.2.0
+Mon Jan 24 11:46:04 2022: Dispatch Server: Accepted socket connection from client
+Mon Jan 24 11:46:04 2022: Starting Socket connection
+Mon Jan 24 11:46:04 2022: EXCHANGE_TOKEN received, server token: a0f9e89c-ea9f-42bf-b88d-9f50a30cb704, passed token: a0f9e89c-ea9f-42bf-b88d-9f50a30cb704
+Mon Jan 24 11:46:05 2022: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Mon Jan 24 11:46:05 2022: SESSION_MGR: creating session with session uuid: 'deb40efd-c31a-426b-a827-0a558f3291e8' and name 'link'
+Mon Jan 24 11:46:05 2022: KERNEL_SVC: creating session with uuid: 'deb40efd-c31a-426b-a827-0a558f3291e8' and name 'link'
+Mon Jan 24 11:46:05 2022: GUIDANCE_SMGR: creating guidance session with uuid: 'deb40efd-c31a-426b-a827-0a558f3291e8' and name 'link'
+Mon Jan 24 11:46:05 2022: SYSTEM_DIAGRAM_SMGR: creating diagram session with uuid: 'deb40efd-c31a-426b-a827-0a558f3291e8' and name 'link'
+Mon Jan 24 11:46:39 2022: Dispatch Server: Accepted socket connection from client
+Mon Jan 24 11:46:39 2022: Starting Socket connection
+Mon Jan 24 11:46:57 2022: Dispatch Server: Accepted socket connection from client
+Mon Jan 24 11:46:57 2022: Starting Socket connection
+Mon Jan 24 11:52:17 2022: SESSION_MGR: closing session for UUID 'deb40efd-c31a-426b-a827-0a558f3291e8' with name 'link'
+Mon Jan 24 11:52:17 2022: KERNEL_SVC: closing session for UUID 'deb40efd-c31a-426b-a827-0a558f3291e8' with name 'link'
+Mon Jan 24 11:52:17 2022: GUIDANCE_SMGR: closing session for UUID 'deb40efd-c31a-426b-a827-0a558f3291e8' with name 'link'
+Mon Jan 24 11:52:17 2022: SYSTEM_DIAGRAM_SMGR: closing session for UUID 'deb40efd-c31a-426b-a827-0a558f3291e8' with name 'link'

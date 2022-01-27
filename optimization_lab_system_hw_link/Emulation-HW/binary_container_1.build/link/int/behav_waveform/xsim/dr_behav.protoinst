@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "modules": {
+      "krnl_idct": {
+      "proto_instances": {
+        "grp_krnl_idct_Pipeline_loop_rd_blocks_fu_165/grp_krnl_idct_Pipeline_loop_rd_blocks_fu_165": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        },
+        "grp_execute_fu_174/grp_execute_fu_174": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        },
+        "grp_krnl_idct_Pipeline_loop_rd_blocks1_fu_183/grp_krnl_idct_Pipeline_loop_rd_blocks1_fu_183": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        },
+        "grp_krnl_idct_Pipeline_loop_wr_blocks_fu_192/grp_krnl_idct_Pipeline_loop_wr_blocks_fu_192": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        }
+      }
+    }
+  }
+}

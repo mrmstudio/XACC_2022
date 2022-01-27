@@ -1,0 +1,84 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu9p-flgb2104-2-i 
+INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [HLS 200-1510] Running: create_clock -period 250.000000MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile 
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_debug -enable 
+INFO: [HLS 200-1510] Running: config_export -disable_deadlock_detection=true 
+INFO: [HLS 200-1510] Running: config_rtl -m_axi_conservative_mode=1 
+WARNING: [HLS 200-483] The 'config_rtl -m_axi_conservative_mode' command is deprecated and will be removed in a future release. Use 'config_interface -m_axi_conservative_mode' as its replacement.
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -ipname krnl_vadd 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 108.737 MB.
+INFO: [HLS 200-10] Analyzing design file '/home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.56 seconds. CPU system time: 0.27 seconds. Elapsed time: 0.42 seconds; current allocated memory: 109.322 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-279] Initial Interval estimation mode is set into default.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 has been inferred on port 'gmem0'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52:5)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 has been inferred on port 'gmem1'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52:5)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 512 has been inferred on port 'gmem0'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.69 seconds. CPU system time: 0.41 seconds. Elapsed time: 4.7 seconds; current allocated memory: 111.417 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 111.418 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 112.611 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 111.878 MB.
+INFO: [XFORM 203-510] Pipelining loop 'vadd1' (/home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52) in function 'krnl_vadd' automatically.
+INFO: [XFORM 203-501] Unrolling loop 'vadd1' (/home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52) in function 'krnl_vadd' partially with a factor of 16.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 133.486 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 136.522 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'krnl_vadd' ...
+WARNING: [SYN 201-107] Renaming port name 'krnl_vadd/out' to 'krnl_vadd/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'krnl_vadd_Pipeline_vadd1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'vadd1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'vadd1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.14 seconds; current allocated memory: 137.280 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 137.983 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'krnl_vadd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.52 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 138.479 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.81 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.82 seconds; current allocated memory: 139.204 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'krnl_vadd_Pipeline_vadd1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'krnl_vadd_Pipeline_vadd1' pipeline 'vadd1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_vadd_Pipeline_vadd1/m_axi_gmem0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_vadd_Pipeline_vadd1/m_axi_gmem0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_vadd_Pipeline_vadd1/m_axi_gmem0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_vadd_Pipeline_vadd1/m_axi_gmem0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_vadd_Pipeline_vadd1/m_axi_gmem0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_vadd_Pipeline_vadd1/m_axi_gmem0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_vadd_Pipeline_vadd1/m_axi_gmem0_AWLOCK' to 0.
+WARNING: 

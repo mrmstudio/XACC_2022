@@ -1,0 +1,36 @@
+Begin Function 'krnl_vadd_Pipeline_vadd1'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_1
+local icmp_ln51 <icmp_51> <integer> <Comparator> 'icmp' </home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51>
+icmp_ln51 /home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:51
+reg: icmp_ln51_reg_212[0:0] lv
+
+local gmem_addr_1 <getelementptr_55> <integer> <> 'getelementptr' </home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55>
+gmem_addr_1 /home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55
+reg: gmem_addr_1_reg_216[63:0] lv
+
+local gmem_addr_2 <getelementptr_55> <integer> <> 'getelementptr' </home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55>
+gmem_addr_2 /home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55
+reg: gmem_addr_2_reg_222[63:0] lv
+
+# ST_73
+local gmem_addr_2_read <read_55> <integer> <> 'read' </home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55>
+gmem_addr_2_read /home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55
+reg: gmem_addr_2_read_reg_233[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage1)
+# ST_72
+local gmem_addr_1_read <read_55> <integer> <> 'read' </home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55>
+gmem_addr_1_read /home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55
+reg: gmem_addr_1_read_reg_228[31:0] lv
+
+# ST_74
+local add_ln55_2 <add_55> <integer> <Arithmetic> 'add' </home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55>
+add_ln55_2 /home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp:55
+reg: add_ln55_2_reg_243[31:0] lv
+
+
+End Function 'krnl_vadd_Pipeline_vadd1'
+

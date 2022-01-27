@@ -1,0 +1,6 @@
+2022-01-24T16:51:22.40291600255-16:51:22 **** Incremental Build of configuration Emulation-HW for project wide_vadd_kernels ****
+000-make -j8 all 
+000-make: Nothing to be done for `all'.
+00255-
+16:51:22 Build Finished (took 81ms)
+

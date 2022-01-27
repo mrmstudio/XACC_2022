@@ -1,0 +1,61 @@
+Begin Function 'krnl_idct'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local voutp_read <> <integer> <> 'read' <>
+reg: voutp_read_reg_278[63:0] lv
+
+local q_read <> <integer> <> 'read' <>
+reg: q_read_reg_283[63:0] lv
+
+local block_read <> <integer> <> 'read' <>
+reg: block_read_reg_288[63:0] lv
+
+local trunc_ln174_1 <partselect_174> <integer> <> 'partselect' </opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:174>
+trunc_ln174_1 /opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:174
+reg: trunc_ln174_1_reg_311[57:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state148)
+# ST_148
+
+RTL state condition: (1'b1 == ap_CS_fsm_state3)
+# ST_3
+local empty_39 <> <integer> <Shift> 'shl' <>
+reg: empty_39_reg_316[31:0] lv
+
+local icmp_ln223 <icmp_223> <integer> <Comparator> 'icmp' </home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223>
+icmp_ln223 /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223
+reg: icmp_ln223_reg_324[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state4)
+# ST_4
+local trunc_ln1 <partselect_223> <integer> <> 'partselect' </home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223>
+trunc_ln1 /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223
+reg: trunc_ln1_reg_328[57:0] lv
+
+local icmp_ln331_1 <icmp_331> <integer> <Comparator> 'icmp' </home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:331>
+icmp_ln331_1 /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:331
+reg: icmp_ln331_1_reg_338[0:0] lv
+
+local trunc_ln2 <partselect_297> <integer> <> 'partselect' </home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297>
+trunc_ln2 /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297
+reg: trunc_ln2_reg_343[57:0] lv
+
+local icmp_ln331 <icmp_331> <integer> <Comparator> 'icmp' </home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:331>
+icmp_ln331 /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:331
+reg: icmp_ln331_reg_349[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state75)
+# ST_75
+
+RTL state condition: (1'b1 == ap_CS_fsm_state77)
+# ST_77
+
+RTL state condition: (1'b1 == ap_CS_fsm_state79)
+# ST_79
+
+End Function 'krnl_idct'
+

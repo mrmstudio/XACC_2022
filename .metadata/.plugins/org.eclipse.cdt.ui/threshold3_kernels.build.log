@@ -1,0 +1,6 @@
+15:04:04 **** Build of configuration Emulation-SW for project threshold3_kernels ****
+make -j8 all 
+make: *** No rule to make target `../libs/null/L2/examples/threshold/xf_threshold_accel.cpp', needed by `build/threshold_accel.xo'.  Stop.
+
+15:04:04 Build Finished (took 77ms)
+

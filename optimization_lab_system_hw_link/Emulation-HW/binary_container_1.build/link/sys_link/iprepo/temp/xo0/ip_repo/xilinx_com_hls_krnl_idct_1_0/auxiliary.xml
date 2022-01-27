@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="krnl_idct" xd:componentRef="krnl_idct" xd:initiationInterval="x" xd:clockPeriod="4" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(block)" xd:originalName="block" xd:direction="inout" xd:interfaceRef="m_axi_gmem0" xd:busTypeRef="aximm" xd:dataWidth="512" xd:bufferDirection="in"/>
+  <xd:arg xd:name="block" xd:originalName="block" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem0"/>
+  <xd:arg xd:name="*(q)" xd:originalName="q" xd:direction="inout" xd:interfaceRef="m_axi_gmem1" xd:busTypeRef="aximm" xd:dataWidth="512" xd:bufferDirection="in"/>
+  <xd:arg xd:name="q" xd:originalName="q" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x1C" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem1"/>
+  <xd:arg xd:name="*(voutp)" xd:originalName="voutp" xd:direction="inout" xd:interfaceRef="m_axi_gmem2" xd:busTypeRef="aximm" xd:dataWidth="512" xd:bufferDirection="out"/>
+  <xd:arg xd:name="voutp" xd:originalName="voutp" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x28" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem2"/>
+  <xd:arg xd:name="ignore_dc" xd:originalName="ignore_dc" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x34" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="blocks" xd:originalName="blocks" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x3C" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="2150" xd:worst-case="6393" xd:average-case="4272"/>
+  <xd:resourceEstimates xd:LUT="34802" xd:FF="44247" xd:BRAM="0" xd:DSP="306"/>
+</xd:acceleratorMap>

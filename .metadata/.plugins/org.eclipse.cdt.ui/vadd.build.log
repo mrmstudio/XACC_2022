@@ -1,0 +1,8 @@
+12:29:57 **** Incremental Build of configuration Hardware for project vadd ****
+make -j8 all 
+g++ -std=c++1y -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2021.1/include/ -O2 -g -Wall -c -fmessage-length=0 -o "src/vadd.o" "../src/vadd.cpp"
+g++ -std=c++1y -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2021.1/include/ -O2 -g -Wall -c -fmessage-length=0 -o "src/xcl2.o" "../src/xcl2.cpp"
+g++ -o "vadd" src/vadd.o src/xcl2.o -lxilinxopencl -lpthread -lrt -lstdc++ -L/opt/xilinx/xrt/lib/ -Wl,-rpath-link,/opt/xilinx/xrt/lib
+
+12:29:59 Build Finished (took 1s.779ms)
+

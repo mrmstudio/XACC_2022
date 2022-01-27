@@ -1,0 +1,68 @@
+Mon Jan 24 15:06:07 2022: Server was asked to start on port: '41230'
+Mon Jan 24 15:06:07 2022: Server is using token UUID: '41a4858d-a0eb-4636-b9be-8792ee50474c'
+Mon Jan 24 15:06:07 2022: Attempting to start server on port '41230'
+Mon Jan 24 15:06:07 2022: XRC main fifo: created main fifo '/tmp/xrcmain41a4858d-a0eb-4636-b9be-8792ee50474c', fd read = 11
+Mon Jan 24 15:06:07 2022: Running Rule Check Server
+Mon Jan 24 15:06:07 2022: Version 1.6.1
+Mon Jan 24 15:06:08 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 15:06:08 2022: EXCHANGE_TOKEN received, server token: 41a4858d-a0eb-4636-b9be-8792ee50474c, passed token: 41a4858d-a0eb-4636-b9be-8792ee50474c
+Mon Jan 24 15:17:59 2022: SESSION_MGR: creating session with session uuid: 'ea9e7c83-a844-49e4-8ba6-76ef32436c37' and name 'Emulation-HW'
+Mon Jan 24 15:18:07 2022: SESSION_MGR: closing session for UUID 'ea9e7c83-a844-49e4-8ba6-76ef32436c37' with name 'Emulation-HW'
+Mon Jan 24 15:18:07 2022: SESSION_MGR: creating session with session uuid: '7b145144-2fa0-47db-bf33-df7cf4893fca' and name 'Emulation-HW'
+Mon Jan 24 15:18:21 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 15:18:36 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 15:18:54 2022: SESSION_MGR: closing session for UUID '7b145144-2fa0-47db-bf33-df7cf4893fca' with name 'Emulation-HW'
+Mon Jan 24 15:18:54 2022: SESSION_MGR: creating session with session uuid: 'dd57c2cb-01d5-4633-b4ff-352cce4519a1' and name 'Emulation-HW'
+Mon Jan 24 15:19:08 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 15:19:16 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 15:19:59 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 15:24:35 2022: SESSION_MGR: closing session for UUID 'dd57c2cb-01d5-4633-b4ff-352cce4519a1' with name 'Emulation-HW'
+Mon Jan 24 15:25:24 2022: SESSION_MGR: creating session with session uuid: '973b5168-f70b-4fbf-80b4-69002995e300' and name 'SystemDebugger_wide_vadd_system_wide_vadd'
+Mon Jan 24 15:26:28 2022: SESSION_MGR: closing session for UUID '973b5168-f70b-4fbf-80b4-69002995e300' with name 'SystemDebugger_wide_vadd_system_wide_vadd'
+Mon Jan 24 15:56:04 2022: SESSION_MGR: creating session with session uuid: 'f5a26e2b-87d6-4276-845c-356d48d13428' and name 'Emulation-HW'
+Mon Jan 24 15:56:05 2022: SESSION_MGR: closing session for UUID 'f5a26e2b-87d6-4276-845c-356d48d13428' with name 'Emulation-HW'
+Mon Jan 24 15:56:05 2022: SESSION_MGR: creating session with session uuid: 'ee08706e-dd8a-4f0b-8ef8-f4b9e5176d10' and name 'Emulation-HW'
+Mon Jan 24 15:56:19 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 15:56:34 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 15:56:55 2022: SESSION_MGR: closing session for UUID 'ee08706e-dd8a-4f0b-8ef8-f4b9e5176d10' with name 'Emulation-HW'
+Mon Jan 24 15:56:55 2022: SESSION_MGR: creating session with session uuid: '91fc1974-255d-4c5d-9175-874410af598c' and name 'Emulation-HW'
+Mon Jan 24 15:57:10 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 15:57:18 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 15:58:01 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 16:02:44 2022: SESSION_MGR: closing session for UUID '91fc1974-255d-4c5d-9175-874410af598c' with name 'Emulation-HW'
+Mon Jan 24 16:21:54 2022: SESSION_MGR: creating session with session uuid: 'bc1da353-5c0d-418b-ab98-85e5bd840817' and name 'SystemDebugger_wide_vadd_system_wide_vadd'
+Mon Jan 24 16:22:58 2022: SESSION_MGR: closing session for UUID 'bc1da353-5c0d-418b-ab98-85e5bd840817' with name 'SystemDebugger_wide_vadd_system_wide_vadd'
+Mon Jan 24 16:29:02 2022: SESSION_MGR: creating session with session uuid: '7e982772-ddfa-4fd0-8fa8-74aca3b50870' and name 'Emulation-HW'
+Mon Jan 24 16:29:02 2022: SESSION_MGR: closing session for UUID '7e982772-ddfa-4fd0-8fa8-74aca3b50870' with name 'Emulation-HW'
+Mon Jan 24 16:29:02 2022: SESSION_MGR: creating session with session uuid: '79924fd0-5286-4cbb-8404-f0d6c9ee00e5' and name 'Emulation-HW'
+Mon Jan 24 16:29:03 2022: SESSION_MGR: closing session for UUID '79924fd0-5286-4cbb-8404-f0d6c9ee00e5' with name 'Emulation-HW'
+Mon Jan 24 16:29:03 2022: SESSION_MGR: creating session with session uuid: 'a568b915-aa4d-499a-8106-3dfad4d08d35' and name 'Emulation-HW'
+Mon Jan 24 16:29:03 2022: SESSION_MGR: closing session for UUID 'a568b915-aa4d-499a-8106-3dfad4d08d35' with name 'Emulation-HW'
+Mon Jan 24 16:30:01 2022: SESSION_MGR: creating session with session uuid: 'bf594ee7-81f9-4dad-9bd5-743d29c756b8' and name 'SystemDebugger_wide_vadd_system_1_wide_vadd'
+Mon Jan 24 16:31:05 2022: SESSION_MGR: closing session for UUID 'bf594ee7-81f9-4dad-9bd5-743d29c756b8' with name 'SystemDebugger_wide_vadd_system_1_wide_vadd'
+Mon Jan 24 16:37:23 2022: SESSION_MGR: creating session with session uuid: 'c92aca3a-a417-4b5c-b40c-26e09e1d6a51' and name 'Emulation-HW'
+Mon Jan 24 16:37:24 2022: SESSION_MGR: closing session for UUID 'c92aca3a-a417-4b5c-b40c-26e09e1d6a51' with name 'Emulation-HW'
+Mon Jan 24 16:37:24 2022: SESSION_MGR: creating session with session uuid: 'c46084b1-7244-4458-93be-546a78c6f3d6' and name 'Emulation-HW'
+Mon Jan 24 16:37:24 2022: SESSION_MGR: closing session for UUID 'c46084b1-7244-4458-93be-546a78c6f3d6' with name 'Emulation-HW'
+Mon Jan 24 16:37:24 2022: SESSION_MGR: creating session with session uuid: 'cc5b26fb-93ff-44dc-8446-348c476fb2f0' and name 'Emulation-HW'
+Mon Jan 24 16:37:39 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 16:37:46 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 16:38:30 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 16:43:21 2022: SESSION_MGR: closing session for UUID 'cc5b26fb-93ff-44dc-8446-348c476fb2f0' with name 'Emulation-HW'
+Mon Jan 24 16:44:15 2022: SESSION_MGR: creating session with session uuid: '41586a5c-f9ff-4510-92f8-31cb4cae09d0' and name 'SystemDebugger_wide_vadd_system_2_wide_vadd'
+Mon Jan 24 16:45:19 2022: SESSION_MGR: closing session for UUID '41586a5c-f9ff-4510-92f8-31cb4cae09d0' with name 'SystemDebugger_wide_vadd_system_2_wide_vadd'
+Mon Jan 24 16:51:22 2022: SESSION_MGR: creating session with session uuid: '55b823e8-08bc-466d-9bba-37502c407eaa' and name 'Emulation-HW'
+Mon Jan 24 16:51:22 2022: SESSION_MGR: closing session for UUID '55b823e8-08bc-466d-9bba-37502c407eaa' with name 'Emulation-HW'
+Mon Jan 24 16:51:22 2022: SESSION_MGR: creating session with session uuid: '66c3b148-001a-4a3a-a906-1da7724abb6b' and name 'Emulation-HW'
+Mon Jan 24 16:51:37 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 16:51:45 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 16:52:30 2022: Rule Check Server: Accepted socket connection from client
+Mon Jan 24 16:57:17 2022: SESSION_MGR: closing session for UUID '66c3b148-001a-4a3a-a906-1da7724abb6b' with name 'Emulation-HW'
+Mon Jan 24 16:58:21 2022: SESSION_MGR: creating session with session uuid: '21b49ef9-1ac5-4b40-b884-8bfd70d0db92' and name 'SystemDebugger_wide_vadd_system_3_wide_vadd'
+Mon Jan 24 16:59:35 2022: SESSION_MGR: closing session for UUID '21b49ef9-1ac5-4b40-b884-8bfd70d0db92' with name 'SystemDebugger_wide_vadd_system_3_wide_vadd'
+Mon Jan 24 17:35:23 2022: STOP_SERVER received, server token: 41a4858d-a0eb-4636-b9be-8792ee50474c, passed token: 41a4858d-a0eb-4636-b9be-8792ee50474c
+Mon Jan 24 17:35:23 2022: Socket received request to stop server.
+Mon Jan 24 17:35:23 2022: SERVER: destructor for server bound to port 41230
+Mon Jan 24 17:35:23 2022: XRC main fifo: Good unlink of /tmp/xrcmain41a4858d-a0eb-4636-b9be-8792ee50474c
+Mon Jan 24 17:35:23 2022: Server exiting with status 0.
+Mon Jan 24 17:35:23 2022: Closing log file.

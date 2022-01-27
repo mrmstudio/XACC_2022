@@ -1,0 +1,68 @@
+Begin Function 'krnl_vadd'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local tmp <bitselect_40> <integer> <> 'bitselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40>
+tmp /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40
+reg: tmp_reg_265[0:0] lv
+
+local p_lshr_cast <partselect_40> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40>
+p_lshr_cast /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40
+reg: p_lshr_cast_reg_270[27:0] lv
+
+local p_lshr_f_cast <partselect_40> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40>
+p_lshr_f_cast /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40
+reg: p_lshr_f_cast_reg_275[27:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local out_read <read_40> <integer> <> 'read' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40>
+out /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40
+reg: out_read_reg_280[63:0] lv
+
+local in2_read <read_40> <integer> <> 'read' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40>
+in2 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40
+reg: in2_read_reg_285[63:0] lv
+
+local in1_read <read_40> <integer> <> 'read' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40>
+in1 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40
+reg: in1_read_reg_290[63:0] lv
+
+local div <select_40> <integer> <> 'select' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40>
+div /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40
+reg: div_reg_295[27:0] lv
+
+local icmp_ln52 <icmp_52> <integer> <Comparator> 'icmp' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+icmp_ln52 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: icmp_ln52_reg_301[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state3)
+# ST_3
+local div_cast <zext_40> <integer> <> 'zext' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40>
+div_cast /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40
+reg: div_cast_reg_305[31:0] lv
+
+local mul <bitconcatenate_40> <integer> <> 'bitconcatenate' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40>
+mul /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:40
+reg: mul_reg_312[31:0] lv
+
+local trunc_ln <partselect_52> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+trunc_ln /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: trunc_ln_reg_317[57:0] lv
+
+local trunc_ln52_1 <partselect_52> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+trunc_ln52_1 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: trunc_ln52_1_reg_327[57:0] lv
+
+local trunc_ln52_2 <partselect_52> <integer> <> 'partselect' </home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52>
+trunc_ln52_2 /home/centos/workspace/wide_vadd_kernels/src/krnl_vadd.cpp:52
+reg: trunc_ln52_2_reg_337[57:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state74)
+# ST_74
+
+End Function 'krnl_vadd'
+

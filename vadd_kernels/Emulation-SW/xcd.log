@@ -1,0 +1,20 @@
+Mon Jan 24 11:11:26 2022: Running xcd server. This server was built by gradle.
+Mon Jan 24 11:11:26 2022: Server was asked to start on port: '40354'
+Mon Jan 24 11:11:26 2022: Server is using token UUID: '92a34ba5-150b-429a-8f08-8b6653436894'
+Mon Jan 24 11:11:26 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Mon Jan 24 11:11:26 2022: Attempting to start server on port '40354'
+Mon Jan 24 11:11:26 2022: XCD main fifo: created main fifo '/tmp/xcdmain92a34ba5-150b-429a-8f08-8b6653436894', fd read = 14
+Mon Jan 24 11:11:26 2022: Running Dispatch Server
+Mon Jan 24 11:11:26 2022: Version 2.2.0
+Mon Jan 24 11:11:34 2022: Dispatch Server: Accepted socket connection from client
+Mon Jan 24 11:11:34 2022: Starting Socket connection
+Mon Jan 24 11:11:34 2022: EXCHANGE_TOKEN received, server token: 92a34ba5-150b-429a-8f08-8b6653436894, passed token: 92a34ba5-150b-429a-8f08-8b6653436894
+Mon Jan 24 11:11:36 2022: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Mon Jan 24 11:11:36 2022: SESSION_MGR: creating session with session uuid: '1494df1e-65a5-45bd-963e-217d83fcdb23' and name 'krnl_vadd'
+Mon Jan 24 11:11:36 2022: KERNEL_SVC: creating session with uuid: '1494df1e-65a5-45bd-963e-217d83fcdb23' and name 'krnl_vadd'
+Mon Jan 24 11:11:36 2022: GUIDANCE_SMGR: creating guidance session with uuid: '1494df1e-65a5-45bd-963e-217d83fcdb23' and name 'krnl_vadd'
+Mon Jan 24 11:11:36 2022: SYSTEM_DIAGRAM_SMGR: creating diagram session with uuid: '1494df1e-65a5-45bd-963e-217d83fcdb23' and name 'krnl_vadd'
+Mon Jan 24 11:12:01 2022: SESSION_MGR: closing session for UUID '1494df1e-65a5-45bd-963e-217d83fcdb23' with name 'krnl_vadd'
+Mon Jan 24 11:12:01 2022: KERNEL_SVC: closing session for UUID '1494df1e-65a5-45bd-963e-217d83fcdb23' with name 'krnl_vadd'
+Mon Jan 24 11:12:01 2022: GUIDANCE_SMGR: closing session for UUID '1494df1e-65a5-45bd-963e-217d83fcdb23' with name 'krnl_vadd'
+Mon Jan 24 11:12:01 2022: SYSTEM_DIAGRAM_SMGR: closing session for UUID '1494df1e-65a5-45bd-963e-217d83fcdb23' with name 'krnl_vadd'

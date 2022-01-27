@@ -1,0 +1,168 @@
+<ENTRY>
+{
+ "thisFile": "/home/centos/workspace/vadd_kernels/Emulation-SW/build/krnl_vadd.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Jan 24 11:11:34 2022",
+ "timestampMillis": "1643022694830",
+ "buildStep": {
+  "cmdId": "adfbd0de-735b-4639-ae64-257baf9df9ef",
+  "name": "v++",
+  "logFile": "/home/centos/workspace/vadd_kernels/Emulation-SW/build/krnl_vadd/krnl_vadd.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2021.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target sw_emu --compile -I../src --config krnl_vadd-compile.cfg -obuild/krnl_vadd.xo ../src/krnl_vadd.cpp ",
+  "args": [
+   "--target",
+   "sw_emu",
+   "--compile",
+   "-I../src",
+   "--config",
+   "krnl_vadd-compile.cfg",
+   "-obuild/krnl_vadd.xo",
+   "../src/krnl_vadd.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/vadd_kernels/Emulation-SW/krnl_vadd-compile.cfg",
+    "content": "platform=/home/centos/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm\nsave-temps=1\nkernel=krnl_vadd\ndebug=1\nmessageDb=build/krnl_vadd.mdb\ntemp_dir=build\nreport_dir=build/reports\nlog_dir=build/logs\n\n[advanced]\nmisc=solution_name=krnl_vadd"
+   }
+  ],
+  "cwd": "/home/centos/workspace/vadd_kernels/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 24 11:11:34 2022",
+ "timestampMillis": "1643022694830",
+ "status": {
+  "cmdId": "adfbd0de-735b-4639-ae64-257baf9df9ef",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Jan 24 11:11:41 2022",
+ "timestampMillis": "1643022701261",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+  "hardwareDsa": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa",
+  "platformDirectory": "/home/centos/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_SW_EMU",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "krnl_vadd",
+     "file": "/home/centos/workspace/vadd_kernels/Emulation-SW/build/krnl_vadd.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/centos/workspace/vadd_kernels/src/krnl_vadd.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2021.1. SW Build 3246112 on 2021-06-09-14:19:56"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 24 11:11:41 2022",
+ "timestampMillis": "1643022701378",
+ "buildStep": {
+  "cmdId": "2a2c08b0-021f-4f6d-892e-4e1f4f420642",
+  "name": "vitis_hls",
+  "logFile": "/home/centos/workspace/vadd_kernels/Emulation-SW/build/krnl_vadd/krnl_vadd/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/centos/workspace/vadd_kernels/Emulation-SW/build/krnl_vadd/krnl_vadd/krnl_vadd.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/centos/workspace/vadd_kernels/Emulation-SW/build/krnl_vadd/krnl_vadd/krnl_vadd.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/vadd_kernels/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 24 11:11:41 2022",
+ "timestampMillis": "1643022701379",
+ "status": {
+  "cmdId": "2a2c08b0-021f-4f6d-892e-4e1f4f420642",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 24 11:12:01 2022",
+ "timestampMillis": "1643022721259",
+ "status": {
+  "cmdId": "2a2c08b0-021f-4f6d-892e-4e1f4f420642",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 24 11:12:01 2022",
+ "timestampMillis": "1643022721270",
+ "report": {
+  "path": "/home/centos/workspace/vadd_kernels/Emulation-SW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 24 11:12:01 2022",
+ "timestampMillis": "1643022721270",
+ "report": {
+  "path": "/home/centos/workspace/vadd_kernels/Emulation-SW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 24 11:12:01 2022",
+ "timestampMillis": "1643022721271",
+ "status": {
+  "cmdId": "adfbd0de-735b-4639-ae64-257baf9df9ef",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

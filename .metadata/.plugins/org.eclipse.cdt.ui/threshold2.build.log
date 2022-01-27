@@ -1,0 +1,19 @@
+14:40:57 **** Incremental Build of configuration Emulation-SW for project threshold2 ****
+make -j8 all 
+g++ -std=c++1y -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2021.1/include/ -O0 -g -Wall -O3 -c -fmessage-length=0 -o "src/xf_threshold_accel.o" "../src/xf_threshold_accel.cpp"
+g++ -std=c++1y -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2021.1/include/ -O0 -g -Wall -O3 -c -fmessage-length=0 -o "src/xf_threshold_tb.o" "../src/xf_threshold_tb.cpp"
+../src/xf_threshold_tb.cpp:17:33: fatal error: common/xf_headers.hpp: No such file or directory
+ #include "common/xf_headers.hpp"
+                                 ^
+compilation terminated.
+make: *** [src/xf_threshold_tb.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/xf_threshold_accel.cpp:17:0:
+../src/xf_threshold_config.h:23:32: fatal error: common/xf_common.hpp: No such file or directory
+ #include "common/xf_common.hpp"
+                                ^
+compilation terminated.
+make: *** [src/xf_threshold_accel.o] Error 1
+
+14:40:57 Build Finished (took 752ms)
+

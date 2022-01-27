@@ -1,0 +1,126 @@
+
+
+================================================================
+== Synthesis Summary Report of 'krnl_idct'
+================================================================
++ General Information: 
+    * Date:           Tue Jan 25 07:51:32 2022
+    * Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+    * Project:        krnl_idct
+    * Solution:       solution (Vitis Kernel Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu9p-flgb2104-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----------+------------+------------+-----+
+    |                      Modules                     |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |          |          |            |            |     |
+    |                      & Loops                     |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |     FF     |     LUT    | URAM|
+    +--------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----------+------------+------------+-----+
+    |+ krnl_idct                                       |  Timing|  -0.47|     6393|  2.557e+04|         -|     6394|     -|        no|  120 (2%)|  306 (4%)|  44247 (1%)|  34802 (2%)|    -|
+    | + grp_krnl_idct_Pipeline_loop_rd_blocks_fu_165   |  Timing|  -0.00|       74|    296.000|         -|       74|     -|        no|         -|         -|   589 (~0%)|   418 (~0%)|    -|
+    |  o loop_rd_blocks                                |       -|   2.92|        3|     12.000|         3|        1|     2|       yes|         -|         -|           -|           -|    -|
+    | + grp_execute_fu_174                             |  Timing|  -0.47|     2071|  8.284e+03|         -|     2071|     -|        no|         -|  306 (4%)|  34292 (1%)|  25944 (2%)|    -|
+    |  o loop_execute                                  |       -|   2.92|     2069|  8.276e+03|        24|        2|  1024|       yes|         -|         -|           -|           -|    -|
+    | + grp_krnl_idct_Pipeline_loop_rd_blocks1_fu_183  |  Timing|  -0.00|     2051|  8.204e+03|         -|     2051|     -|        no|         -|         -|   550 (~0%)|   129 (~0%)|    -|
+    |  o loop_rd_blocks                                |       -|   2.92|     2049|  8.196e+03|         3|        1|  2048|       yes|         -|         -|           -|           -|    -|
+    | + grp_krnl_idct_Pipeline_loop_wr_blocks_fu_192   |  Timing|  -0.00|     2051|  8.204e+03|         -|     2051|     -|        no|         -|         -|   550 (~0%)|   131 (~0%)|    -|
+    |  o loop_wr_blocks                                |       -|   2.92|     2049|  8.196e+03|         3|        1|  2048|       yes|         -|         -|           -|           -|    -|
+    +--------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 512 -> 512 | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
+| m_axi_gmem1 | 512 -> 512 | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
+| m_axi_gmem2 | 512 -> 512 | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* REGISTER
++-------------+----------+
+| Interface   | Bitwidth |
++-------------+----------+
+| event_done  | 1        |
+| event_start | 1        |
++-------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+----------------------+
+| Argument  | Direction | Datatype             |
++-----------+-----------+----------------------+
+| block     | in        | ap_int<512> const *  |
+| q         | in        | ap_uint<512> const * |
+| voutp     | out       | ap_int<512>*         |
+| ignore_dc | in        | int                  |
+| blocks    | in        | unsigned int         |
++-----------+-----------+----------------------+
+
+* SW-to-HW Mapping
++-----------+-------------------------+-----------+----------+-----------------------+
+| Argument  | HW Name                 | HW Type   | HW Usage | HW Info               |
++-----------+-------------------------+-----------+----------+-----------------------+
+| block     | m_axi_gmem0             | interface |          |                       |
+| block     | s_axi_control block_r_1 | register  | offset   | offset=0x10, range=32 |
+| block     | s_axi_control block_r_2 | register  | offset   | offset=0x14, range=32 |
+| q         | m_axi_gmem1             | interface |          |                       |
+| q         | s_axi_control q_1       | register  | offset   | offset=0x1c, range=32 |
+| q         | s_axi_control q_2       | register  | offset   | offset=0x20, range=32 |
+| voutp     | m_axi_gmem2             | interface |          |                       |
+| voutp     | s_axi_control voutp_1   | register  | offset   | offset=0x28, range=32 |
+| voutp     | s_axi_control voutp_2   | register  | offset   | offset=0x2c, range=32 |
+| ignore_dc | s_axi_control ignore_dc | register  |          | offset=0x34, range=32 |
+| blocks    | s_axi_control blocks    | register  |          | offset=0x3c, range=32 |
++-----------+-------------------------+-----------+----------+-----------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+* Burst Summary
++--------------+----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
+| HW Interface | Loop           | Message                                                                                                                                                                                                                         | Location                                                                 |
++--------------+----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
+| m_axi_gmem0  | loop_rd_blocks | Multiple burst reads of variable length and bit width 512. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.  | /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223:21 |
+| m_axi_gmem2  | loop_wr_blocks | Multiple burst writes of variable length and bit width 512. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. | /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297:19 |
++--------------+----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
+
+* Bursts and Widening Missed
++--------------+----------+----------------+---------------------------------------------------------------------------------------------------------------------+------------+--------------------------------------------------------------------------+
+| HW Interface | Variable | Loop           | Problem                                                                                                             | Resolution | Location                                                                 |
++--------------+----------+----------------+---------------------------------------------------------------------------------------------------------------------+------------+--------------------------------------------------------------------------+
+| m_axi_gmem1  | q        | loop_rd_blocks | Could not analyze pattern                                                                                           | 214-229    | /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223:21 |
+| m_axi_gmem2  | voutp    |                | Could not widen since the size of type 'i512' is greater than or equal to the max_widen_bitwidth threshold of '64'. |            | /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297:19 |
+| m_axi_gmem0  | block    |                | Could not widen since the size of type 'i512' is greater than or equal to the max_widen_bitwidth threshold of '64'. |            | /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223:21 |
++--------------+----------+----------------+---------------------------------------------------------------------------------------------------------------------+------------+--------------------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+

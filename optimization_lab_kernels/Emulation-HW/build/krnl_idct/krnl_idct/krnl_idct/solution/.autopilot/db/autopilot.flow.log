@@ -1,0 +1,1612 @@
+INFO-FLOW: Workspace /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution opened at Tue Jan 25 07:50:41 UTC 2022
+Execute       send_msg_by_id INFO @200-1505@%s%s  vitis 
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Execute       get_config_interface -m_axi_latency 
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_interface -m_axi_latency=64 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+Execute       config_interface -m_axi_latency=64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_interface -m_axi_alignment_byte_size=64 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+Execute       config_interface -m_axi_alignment_byte_size=64 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_interface -m_axi_max_widen_bitwidth=512 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+Execute       config_interface -m_axi_max_widen_bitwidth=512 
+Execute       get_config_interface -default_interface 
+INFO-FLOW: Setting macro_cmd open_solution -flow_target vitis configuration: config_interface -default_interface=kernel
+Execute       config_interface -default_interface=kernel 
+Execute       get_config_rtl -register_reset_num 
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_rtl -register_reset_num=3 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+Execute       config_rtl -register_reset_num=3 
+Execute     set_part xcvu9p-flgb2104-2-i 
+INFO: [HLS 200-1510] Running: set_part xcvu9p-flgb2104-2-i 
+Execute       create_platform xcvu9p-flgb2104-2-i -board  
+DBG:HLSDevice: Trying to load device library: /opt/Xilinx/Vitis_HLS/2021.1/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/Xilinx/Vivado/2021.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/DSP48/virtexuplus_dsp48e2.hlp 
+Command         ap_source done; 0.12 sec.
+INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flgb2104-2-i'
+Command       create_platform done; 1.39 sec.
+Execute       source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/axi4.gen 
+Command         ap_source done; 0.13 sec.
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/maxi.gen 
+Command           ap_source done; 0.16 sec.
+Command         ap_source done; 0.37 sec.
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command         ap_source done; 0.2 sec.
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command         ap_source done; 0.15 sec.
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command         ap_source done; 0.19 sec.
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.19 sec.
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 1.56 sec.
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 3.01 sec.
+Execute     create_clock -period 250.000000MHz -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 250.000000MHz -name default 
+Execute       ap_set_clock -name default -period 4 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+Execute     config_rtl -kernel_profile 
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile 
+Execute     config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+Execute     config_debug -enable 
+INFO: [HLS 200-1510] Running: config_debug -enable 
+Execute     config_export -disable_deadlock_detection=true 
+INFO: [HLS 200-1510] Running: config_export -disable_deadlock_detection=true 
+Execute     config_rtl -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_rtl -m_axi_conservative_mode=1 
+WARNING: [HLS 200-483] The 'config_rtl -m_axi_conservative_mode' command is deprecated and will be removed in a future release. Use 'config_interface -m_axi_conservative_mode' as its replacement.
+Execute     config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+Execute     config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+Execute     config_export -format ip_catalog -ipname krnl_idct 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -ipname krnl_idct 
+Execute     csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -hw_syn 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -pre_tcl 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 108.735 MB.
+INFO: [HLS 200-10] Analyzing design file '/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp as C++
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/clang /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp -foptimization-record-file=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.krnl_idct.cpp.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vitis_HLS/2021.1/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E -g -I/home/centos/workspace/optimization_lab_kernels/src -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -I /opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/39 -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot -I /opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.krnl_idct.cpp.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.krnl_idct.cpp.err.log 
+Command         ap_eval done; 0.75 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.8 seconds per iteration
+Execute         set_directive_top krnl_idct -name=krnl_idct 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute         list_core -type functional_unit 
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.err.log 
+Command         ap_eval done; 0.84 sec.
+WARNING: [HLS 207-5528] Ignore interface attribute or pragma which is not used in top function: /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:358:9
+Execute         clang_tidy xilinx-systemc-detector /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/.systemc_flag -fix-errors /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.68 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/all.directive.json -fix-errors /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.9 sec.
+Execute         clang_tidy xilinx-constantarray-param,xilinx-remove-assert /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.69 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.6 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang-tidy.krnl_idct.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang-tidy.krnl_idct.pp.0.cpp.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang-tidy.krnl_idct.pp.0.cpp.err.log 
+Command           ap_eval done; 1.06 sec.
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command         clang_tidy done; 1.11 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/xilinx-dataflow-lawyer.krnl_idct.pp.0.cpp.diag.yml /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/xilinx-dataflow-lawyer.krnl_idct.pp.0.cpp.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/xilinx-dataflow-lawyer.krnl_idct.pp.0.cpp.err.log 
+Command         ap_eval done; 0.63 sec.
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.krnl_idct.pp.0.cpp.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.pp.0.cpp -g -I/home/centos/workspace/optimization_lab_kernels/src -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot -I /opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.bc -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.krnl_idct.pp.0.cpp.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.krnl_idct.pp.0.cpp.err.log 
+Command         ap_eval done; 0.69 sec.
+WARNING: [HLS 207-5301] unused parameter 'print': /opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h:792:16
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.76 seconds. CPU system time: 0.63 seconds. Elapsed time: 6.35 seconds; current allocated memory: 110.555 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.0.bc -args  "/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.g.bc"  
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.g.bc -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.0.bc > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/llvm-link.a.g.ld.0.bc.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/llvm-link.a.g.ld.0.bc.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.1.lower.bc -args /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/opt.a.g.ld.1.lower.bc.diag.yml /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.1.lower.bc > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/opt.a.g.ld.1.lower.bc.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/opt.a.g.ld.1.lower.bc.err.log 
+Command           ap_eval done; 0.12 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.12 sec.
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.2.m1.bc -args /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/Vitis_HLS/2021.1/lnx64/lib/libhlsm_39.bc /opt/Xilinx/Vitis_HLS/2021.1/lnx64/lib/libhlsmc++_39.bc 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/Vitis_HLS/2021.1/lnx64/lib/libhlsm_39.bc /opt/Xilinx/Vitis_HLS/2021.1/lnx64/lib/libhlsmc++_39.bc -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.2.m1.bc > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.err.log 
+Command           ap_eval done; 3.51 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 3.51 sec.
+Execute         run_link_or_opt -opt -out /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.3.fpc.bc -args /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=krnl_idct -reflow-float-conversion 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/opt.a.g.ld.3.fpc.bc.diag.yml /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=krnl_idct -reflow-float-conversion -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.3.fpc.bc > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/opt.a.g.ld.3.fpc.bc.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/opt.a.g.ld.3.fpc.bc.err.log 
+Command           ap_eval done; 1.19 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 1.21 sec.
+Execute         run_link_or_opt -out /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.4.m2.bc -args /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/Vitis_HLS/2021.1/lnx64/lib/libfloatconversion_39.bc 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/Vitis_HLS/2021.1/lnx64/lib/libfloatconversion_39.bc -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.4.m2.bc > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.5.gdce.bc -args /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=krnl_idct 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/opt.a.g.ld.5.gdce.bc.diag.yml /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=krnl_idct -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.5.gdce.bc > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/opt.a.g.ld.5.gdce.bc.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/opt.a.g.ld.5.gdce.bc.err.log 
+INFO-FLOW: 
+Execute         get_solution -flow_target 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_interface -default_slave_interface 
+Execute         get_solution -flow_target 
+Execute         get_config_interface -m_axi_offset 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_auto_max_ports 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -s_axilite_data64 
+Execute         get_config_compile -instruction_warning_threshold 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_compile -pragma_strict_mode 
+Execute         get_config_compile -pipeline_style 
+Execute         get_config_array_partition -throughput_driven 
+Execute         send_msg_by_id INFO @200-777@%s Vitis 
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+Execute         is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2021.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.a.g.ld.0.bc.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=krnl_idct -mllvm -hls-db-dir -mllvm /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/../../../kernel.xml -mllvm -top-io-mapping-info=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=true -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=64 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=512 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshhold=200000 -mllvm -assume-maxi-align=64 -mllvm -no-unaligned-maxi-accesses=false -mllvm -reflow-pipeline-style-llvm-setting=0 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-disaggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -enable-reflow-vitis-flow-setting=true -x ir /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.ld.5.gdce.bc -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium > /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.a.g.ld.0.bc.out.log 2> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/clang.a.g.ld.0.bc.err.log 
+Command         ap_eval done; 0.35 sec.
+INFO: [HLS 214-279] Initial Interval estimation mode is set into default.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::write(ap_uint<512> const&)' into 'void read_blocks<ap_uint<512> >(ap_uint<512> const*, hls::stream<ap_uint<512>, 0>&, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:226:6)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::write(ap_int<512> const&)' into 'void read_blocks<ap_int<512> >(ap_int<512> const*, hls::stream<ap_int<512>, 0>&, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:226:6)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::read(ap_uint<512>&)' into 'hls::stream<ap_uint<512>, 0>::read()' (/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::read(ap_int<512>&)' into 'hls::stream<ap_int<512>, 0>::read()' (/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::read()' into 'execute(hls::stream<ap_int<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_int<512>, 0>&, bool, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:259:14)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::write(ap_int<512> const&)' into 'execute(hls::stream<ap_int<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_int<512>, 0>&, bool, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:281:14)
+INFO: [HLS 214-131] Inlining function 'idct(short const*, unsigned short const*, short*, bool)' into 'execute(hls::stream<ap_int<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_int<512>, 0>&, bool, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:274:5)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::read()' into 'execute(hls::stream<ap_int<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_int<512>, 0>&, bool, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:268:20)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::read()' into 'write_blocks(ap_int<512>*, hls::stream<ap_int<512>, 0>&, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:300:14)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::stream(char const*)' into 'krnl_idct_dataflow(ap_int<512> const*, ap_uint<512> const*, ap_int<512>*, int, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:321:25)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::stream(char const*)' into 'krnl_idct_dataflow(ap_int<512> const*, ap_uint<512> const*, ap_int<512>*, int, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:322:26)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::stream(char const*)' into 'krnl_idct_dataflow(ap_int<512> const*, ap_uint<512> const*, ap_int<512>*, int, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:323:25)
+INFO: [HLS 214-178] Inlining function 'void read_blocks<ap_uint<512> >(ap_uint<512> const*, hls::stream<ap_uint<512>, 0>&, unsigned int)' into 'krnl_idct_dataflow(ap_int<512> const*, ap_uint<512> const*, ap_int<512>*, int, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:318:0)
+INFO: [HLS 214-178] Inlining function 'void read_blocks<ap_int<512> >(ap_int<512> const*, hls::stream<ap_int<512>, 0>&, unsigned int)' into 'krnl_idct_dataflow(ap_int<512> const*, ap_uint<512> const*, ap_int<512>*, int, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:318:0)
+INFO: [HLS 214-178] Inlining function 'write_blocks(ap_int<512>*, hls::stream<ap_int<512>, 0>&, unsigned int)' into 'krnl_idct_dataflow(ap_int<512> const*, ap_uint<512> const*, ap_int<512>*, int, unsigned int)' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:318:0)
+INFO: [HLS 214-178] Inlining function 'krnl_idct_dataflow(ap_int<512> const*, ap_uint<512> const*, ap_int<512>*, int, unsigned int)' into 'krnl_idct' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:349:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'voutp' with non-compact mode in 512-bits (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:349:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'q' with non-compact mode in 512-bits (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:349:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'block' with non-compact mode in 512-bits (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:349:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-270] Inferring complete partitioning for array 'intermed.i' on dimension 1 (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:69:10)
+INFO: [HLS 214-270] Inferring complete partitioning for array 'iiblock' on dimension 1 (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:252:10)
+INFO: [HLS 214-270] Inferring complete partitioning for array 'iiq' on dimension 1 (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:253:14)
+INFO: [HLS 214-270] Inferring complete partitioning for array 'iivoutp' on dimension 1 (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:254:13)
+Execute         get_top
+Execute           get_top 
+Execute         get_files -fullpath
+Execute           get_files -fullpath 
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 in loop 'loop_rd_blocks'(/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223:21) has been inferred on port 'gmem0'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223:21)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 512 in loop 'loop_wr_blocks'(/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297:19) has been inferred on port 'gmem2'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:297:19)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ssdm_ints' into '_llvm.fpga.unpack.none.s_struct.ap_ints.i512.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_ints' into 'execute(hls::stream<ap_int<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_int<512>, 0>&, bool, unsigned int) (.1)' (/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_ints.i512.1' into 'krnl_idct' (/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_ints.i512.1' into 'krnl_idct' (/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: copying raw kernel.xml: /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/../../../kernel.xml -> /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.05 seconds. CPU system time: 0.48 seconds. Elapsed time: 6.64 seconds; current allocated memory: 113.755 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 113.756 MB.
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top krnl_idct -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.0.bc -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 116.999 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.1.bc -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.2.prechk.bc -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] /opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_ref.h:708: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 118.186 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.g.1.bc to /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.o.1.bc -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_execute' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:277) in function 'execute' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 2048 to 2 for loop 'loop_rd_blocks' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223:38) in function 'krnl_idct'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 2048 to 2 for loop 'loop_rd_blocks' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:223:38) in function 'krnl_idct'.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_256_1' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:256) in function 'execute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_260_2' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:260) in function 'execute' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_266_3' (/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:0) in function 'execute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_269_4' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:269) in function 'execute' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_88_1' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:88) in function 'execute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_154_2' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:154) in function 'execute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_276_5' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:277) in function 'execute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_278_6' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:277) in function 'execute' completely with a factor of 32.
+INFO: [XFORM 203-101] Partitioning array 'intermed' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:69) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'iiblock' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:252) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'iiq' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:253) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'iivoutp' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:254) in dimension 1 completely.
+Command           transform done; 0.45 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.o.1.tmp.bc -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:145:9) in function 'execute'... converting 27 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'execute' (/home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:90:18)...48 expression(s) balanced.
+Command           transform done; 0.17 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.53 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.62 seconds; current allocated memory: 146.473 MB.
+Execute           get_config_compile -enable_auto_rewind 
+Execute           get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation2 -deadargelim -globaldce -mem2reg -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.o.2.bc -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 2 on port 'gmem1' (/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:174:9). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+Command           transform done; 0.45 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 187.853 MB.
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 1.21 sec.
+Command       elaborate done; 14.2 sec.
+Execute       ap_eval exec zip -j /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'krnl_idct' ...
+Execute         ap_set_top_model krnl_idct 
+Execute         get_model_list krnl_idct -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model krnl_idct 
+Execute         preproc_iomode -model krnl_idct_Pipeline_loop_wr_blocks 
+Execute         preproc_iomode -model execute 
+Execute         preproc_iomode -model krnl_idct_Pipeline_loop_rd_blocks1 
+Execute         preproc_iomode -model krnl_idct_Pipeline_loop_rd_blocks 
+Execute         get_model_list krnl_idct -filter all-wo-channel 
+INFO-FLOW: Model list for configure: krnl_idct_Pipeline_loop_rd_blocks krnl_idct_Pipeline_loop_rd_blocks1 execute krnl_idct_Pipeline_loop_wr_blocks krnl_idct
+INFO-FLOW: Configuring Module : krnl_idct_Pipeline_loop_rd_blocks ...
+Execute         set_default_model krnl_idct_Pipeline_loop_rd_blocks 
+Execute         apply_spec_resource_limit krnl_idct_Pipeline_loop_rd_blocks 
+INFO-FLOW: Configuring Module : krnl_idct_Pipeline_loop_rd_blocks1 ...
+Execute         set_default_model krnl_idct_Pipeline_loop_rd_blocks1 
+Execute         apply_spec_resource_limit krnl_idct_Pipeline_loop_rd_blocks1 
+INFO-FLOW: Configuring Module : execute ...
+Execute         set_default_model execute 
+Execute         apply_spec_resource_limit execute 
+INFO-FLOW: Configuring Module : krnl_idct_Pipeline_loop_wr_blocks ...
+Execute         set_default_model krnl_idct_Pipeline_loop_wr_blocks 
+Execute         apply_spec_resource_limit krnl_idct_Pipeline_loop_wr_blocks 
+INFO-FLOW: Configuring Module : krnl_idct ...
+Execute         set_default_model krnl_idct 
+Execute         apply_spec_resource_limit krnl_idct 
+INFO-FLOW: Model list for preprocess: krnl_idct_Pipeline_loop_rd_blocks krnl_idct_Pipeline_loop_rd_blocks1 execute krnl_idct_Pipeline_loop_wr_blocks krnl_idct
+INFO-FLOW: Preprocessing Module: krnl_idct_Pipeline_loop_rd_blocks ...
+Execute         set_default_model krnl_idct_Pipeline_loop_rd_blocks 
+Execute         cdfg_preprocess -model krnl_idct_Pipeline_loop_rd_blocks 
+Execute         rtl_gen_preprocess krnl_idct_Pipeline_loop_rd_blocks 
+INFO-FLOW: Preprocessing Module: krnl_idct_Pipeline_loop_rd_blocks1 ...
+Execute         set_default_model krnl_idct_Pipeline_loop_rd_blocks1 
+Execute         cdfg_preprocess -model krnl_idct_Pipeline_loop_rd_blocks1 
+Execute         rtl_gen_preprocess krnl_idct_Pipeline_loop_rd_blocks1 
+INFO-FLOW: Preprocessing Module: execute ...
+Execute         set_default_model execute 
+Execute         cdfg_preprocess -model execute 
+Execute         rtl_gen_preprocess execute 
+INFO-FLOW: Preprocessing Module: krnl_idct_Pipeline_loop_wr_blocks ...
+Execute         set_default_model krnl_idct_Pipeline_loop_wr_blocks 
+Execute         cdfg_preprocess -model krnl_idct_Pipeline_loop_wr_blocks 
+Execute         rtl_gen_preprocess krnl_idct_Pipeline_loop_wr_blocks 
+INFO-FLOW: Preprocessing Module: krnl_idct ...
+Execute         set_default_model krnl_idct 
+Execute         cdfg_preprocess -model krnl_idct 
+Execute         rtl_gen_preprocess krnl_idct 
+WARNING: [SYN 201-107] Renaming port name 'krnl_idct/block' to 'krnl_idct/block_r' to avoid the conflict with HDL keywords or other object names.
+INFO-FLOW: Model list for synthesis: krnl_idct_Pipeline_loop_rd_blocks krnl_idct_Pipeline_loop_rd_blocks1 execute krnl_idct_Pipeline_loop_wr_blocks krnl_idct
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'krnl_idct_Pipeline_loop_rd_blocks' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model krnl_idct_Pipeline_loop_rd_blocks 
+Execute         schedule -model krnl_idct_Pipeline_loop_rd_blocks 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_rd_blocks'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'loop_rd_blocks'
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.17 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 188.837 MB.
+Execute         syn_report -verbosereport -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.27 sec.
+Execute         db_write -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks.sched.adb -f 
+INFO-FLOW: Finish scheduling krnl_idct_Pipeline_loop_rd_blocks.
+Execute         set_default_model krnl_idct_Pipeline_loop_rd_blocks 
+Execute         bind -model krnl_idct_Pipeline_loop_rd_blocks 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.16 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.42 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.43 seconds; current allocated memory: 189.145 MB.
+Execute         syn_report -verbosereport -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks.bind.adb -f 
+INFO-FLOW: Finish binding krnl_idct_Pipeline_loop_rd_blocks.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'krnl_idct_Pipeline_loop_rd_blocks1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model krnl_idct_Pipeline_loop_rd_blocks1 
+Execute         schedule -model krnl_idct_Pipeline_loop_rd_blocks1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_rd_blocks'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'loop_rd_blocks'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 189.232 MB.
+Execute         syn_report -verbosereport -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1.sched.adb -f 
+INFO-FLOW: Finish scheduling krnl_idct_Pipeline_loop_rd_blocks1.
+Execute         set_default_model krnl_idct_Pipeline_loop_rd_blocks1 
+Execute         bind -model krnl_idct_Pipeline_loop_rd_blocks1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 189.347 MB.
+Execute         syn_report -verbosereport -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1.bind.adb -f 
+INFO-FLOW: Finish binding krnl_idct_Pipeline_loop_rd_blocks1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'execute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model execute 
+Execute         schedule -model execute 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln128_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln127_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln126_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln128) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln127) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln126) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'loop_execute'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 24, loop 'loop_execute'
+WARNING: [HLS 200-871] Estimated clock period (3.392ns) exceeds the target (target clock period: 4ns, clock uncertainty: 1.08ns, effective delay budget: 2.92ns).
+WARNING: [HLS 200-1016] The critical path in module 'execute' consists of the following:	'add' operation of DSP[408] ('add_ln126', /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:126) [407]  (2.4 ns)
+	'mul' operation of DSP[408] ('mul_ln126', /home/centos/workspace/optimization_lab_kernels/src/krnl_idct.cpp:126) [408]  (0.996 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 3.49 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.05 seconds. CPU system time: 0.41 seconds. Elapsed time: 3.51 seconds; current allocated memory: 195.434 MB.
+Execute         syn_report -verbosereport -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 1.91 sec.
+Execute         db_write -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute.sched.adb -f 
+Command         db_write done; 0.12 sec.
+INFO-FLOW: Finish scheduling execute.
+Execute         set_default_model execute 
+Execute         bind -model execute 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 1.3 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.88 seconds. CPU system time: 0.45 seconds. Elapsed time: 3.33 seconds; current allocated memory: 203.232 MB.
+Execute         syn_report -verbosereport -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 4.21 sec.
+Execute         db_write -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute.bind.adb -f 
+Command         db_write done; 0.14 sec.
+INFO-FLOW: Finish binding execute.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'krnl_idct_Pipeline_loop_wr_blocks' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model krnl_idct_Pipeline_loop_wr_blocks 
+Execute         schedule -model krnl_idct_Pipeline_loop_wr_blocks 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wr_blocks'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'loop_wr_blocks'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.98 seconds. CPU system time: 0.43 seconds. Elapsed time: 4.4 seconds; current allocated memory: 203.324 MB.
+Execute         syn_report -verbosereport -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks.sched.adb -f 
+INFO-FLOW: Finish scheduling krnl_idct_Pipeline_loop_wr_blocks.
+Execute         set_default_model krnl_idct_Pipeline_loop_wr_blocks 
+Execute         bind -model krnl_idct_Pipeline_loop_wr_blocks 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 203.441 MB.
+Execute         syn_report -verbosereport -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks.bind.adb -f 
+INFO-FLOW: Finish binding krnl_idct_Pipeline_loop_wr_blocks.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'krnl_idct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model krnl_idct 
+Execute         schedule -model krnl_idct 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.27 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 203.852 MB.
+Execute         syn_report -verbosereport -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.41 sec.
+Execute         db_write -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.sched.adb -f 
+INFO-FLOW: Finish scheduling krnl_idct.
+Execute         set_default_model krnl_idct 
+Execute         bind -model krnl_idct 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 1.02 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.43 seconds. CPU system time: 0 seconds. Elapsed time: 1.44 seconds; current allocated memory: 204.565 MB.
+Execute         syn_report -verbosereport -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 2.37 sec.
+Execute         db_write -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.bind.adb -f 
+INFO-FLOW: Finish binding krnl_idct.
+Execute         get_model_list krnl_idct -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess krnl_idct_Pipeline_loop_rd_blocks 
+Execute         rtl_gen_preprocess krnl_idct_Pipeline_loop_rd_blocks1 
+Execute         rtl_gen_preprocess execute 
+Execute         rtl_gen_preprocess krnl_idct_Pipeline_loop_wr_blocks 
+Execute         rtl_gen_preprocess krnl_idct 
+INFO-FLOW: Model list for RTL generation: krnl_idct_Pipeline_loop_rd_blocks krnl_idct_Pipeline_loop_rd_blocks1 execute krnl_idct_Pipeline_loop_wr_blocks krnl_idct
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'krnl_idct_Pipeline_loop_rd_blocks' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model krnl_idct_Pipeline_loop_rd_blocks -top_prefix krnl_idct_ -sub_prefix krnl_idct_ -mg_file /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks.compgen.tcl 
+Execute           auto_get_db
+INFO: [RTGEN 206-100] Finished creating RTL model for 'krnl_idct_Pipeline_loop_rd_blocks'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.41 seconds. CPU system time: 0 seconds. Elapsed time: 2.42 seconds; current allocated memory: 205.622 MB.
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute         gen_rtl krnl_idct_Pipeline_loop_rd_blocks -style xilinx -f -lang vhdl -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/vhdl/krnl_idct_krnl_idct_Pipeline_loop_rd_blocks 
+Execute         gen_rtl krnl_idct_Pipeline_loop_rd_blocks -style xilinx -f -lang vlog -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/verilog/krnl_idct_krnl_idct_Pipeline_loop_rd_blocks 
+Execute         syn_report -csynth -model krnl_idct_Pipeline_loop_rd_blocks -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/krnl_idct_Pipeline_loop_rd_blocks_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model krnl_idct_Pipeline_loop_rd_blocks -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/krnl_idct_Pipeline_loop_rd_blocks_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model krnl_idct_Pipeline_loop_rd_blocks -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model krnl_idct_Pipeline_loop_rd_blocks -f -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks.adb 
+Execute         db_write -model krnl_idct_Pipeline_loop_rd_blocks -bindview -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info krnl_idct_Pipeline_loop_rd_blocks -p /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'krnl_idct_Pipeline_loop_rd_blocks1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model krnl_idct_Pipeline_loop_rd_blocks1 -top_prefix krnl_idct_ -sub_prefix krnl_idct_ -mg_file /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'krnl_idct_Pipeline_loop_rd_blocks1' pipeline 'loop_rd_blocks' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_rd_blocks1/m_axi_gmem0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'krnl_idct_Pipeline_loop_rd_blocks1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 206.663 MB.
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute         gen_rtl krnl_idct_Pipeline_loop_rd_blocks1 -style xilinx -f -lang vhdl -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/vhdl/krnl_idct_krnl_idct_Pipeline_loop_rd_blocks1 
+Execute         gen_rtl krnl_idct_Pipeline_loop_rd_blocks1 -style xilinx -f -lang vlog -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/verilog/krnl_idct_krnl_idct_Pipeline_loop_rd_blocks1 
+Execute         syn_report -csynth -model krnl_idct_Pipeline_loop_rd_blocks1 -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/krnl_idct_Pipeline_loop_rd_blocks1_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model krnl_idct_Pipeline_loop_rd_blocks1 -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/krnl_idct_Pipeline_loop_rd_blocks1_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model krnl_idct_Pipeline_loop_rd_blocks1 -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model krnl_idct_Pipeline_loop_rd_blocks1 -f -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1.adb 
+Execute         db_write -model krnl_idct_Pipeline_loop_rd_blocks1 -bindview -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info krnl_idct_Pipeline_loop_rd_blocks1 -p /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'execute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model execute -top_prefix krnl_idct_ -sub_prefix krnl_idct_ -mg_file /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'execute' pipeline 'loop_execute' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'execute' is 8425 from HDL expression: ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_24s_24s_12ns_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_27s_27s_11ns_27_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_24s_24s_10ns_3ns_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_24s_24s_11ns_3ns_30_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_24s_11ns_30ns_30_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_24s_11s_32ns_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_24s_12ns_32ns_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_24s_13s_30ns_30_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_24s_13s_32ns_32_4_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_27s_11ns_27ns_27_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_27s_13s_27ns_27_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_31s_9ns_32_2_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_11ns_32_2_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_11s_32_2_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_12ns_32_2_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_13ns_32_2_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_13s_32_2_1': 22 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_9ns_32_2_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16ns_16s_32_4_1': 48 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_16ns_21_4_1': 14 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_16s_16_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'execute'.
+Command         create_rtl_model done; 1.13 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.98 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.25 seconds; current allocated memory: 223.694 MB.
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute         gen_rtl execute -style xilinx -f -lang vhdl -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/vhdl/krnl_idct_execute 
+Execute         gen_rtl execute -style xilinx -f -lang vlog -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/verilog/krnl_idct_execute 
+Execute         syn_report -csynth -model execute -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/execute_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 1.92 sec.
+Execute         syn_report -rtlxml -model execute -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/execute_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.91 sec.
+Execute         syn_report -verbosereport -model execute -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 5.2 sec.
+Execute         db_write -model execute -f -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute.adb 
+Command         db_write done; 1.12 sec.
+Execute         db_write -model execute -bindview -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/design.bindinfo.xml 
+Command         db_write done; 0.73 sec.
+Execute         gen_tb_info execute -p /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'krnl_idct_Pipeline_loop_wr_blocks' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model krnl_idct_Pipeline_loop_wr_blocks -top_prefix krnl_idct_ -sub_prefix krnl_idct_ -mg_file /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'krnl_idct_Pipeline_loop_wr_blocks' pipeline 'loop_wr_blocks' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_Pipeline_loop_wr_blocks/m_axi_gmem2_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'krnl_idct_Pipeline_loop_wr_blocks'.
+Command         create_rtl_model done; 0.31 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 9.93 seconds. CPU system time: 0.55 seconds. Elapsed time: 10.72 seconds; current allocated memory: 254.859 MB.
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute         gen_rtl krnl_idct_Pipeline_loop_wr_blocks -style xilinx -f -lang vhdl -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/vhdl/krnl_idct_krnl_idct_Pipeline_loop_wr_blocks 
+Execute         gen_rtl krnl_idct_Pipeline_loop_wr_blocks -style xilinx -f -lang vlog -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/verilog/krnl_idct_krnl_idct_Pipeline_loop_wr_blocks 
+Execute         syn_report -csynth -model krnl_idct_Pipeline_loop_wr_blocks -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/krnl_idct_Pipeline_loop_wr_blocks_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model krnl_idct_Pipeline_loop_wr_blocks -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/krnl_idct_Pipeline_loop_wr_blocks_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model krnl_idct_Pipeline_loop_wr_blocks -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model krnl_idct_Pipeline_loop_wr_blocks -f -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks.adb 
+Execute         db_write -model krnl_idct_Pipeline_loop_wr_blocks -bindview -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info krnl_idct_Pipeline_loop_wr_blocks -p /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'krnl_idct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model krnl_idct -top_prefix  -sub_prefix krnl_idct_ -mg_file /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_idct/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_idct/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_idct/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_idct/block_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_idct/q' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_idct/voutp' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_idct/ignore_dc' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_idct/blocks' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'krnl_idct' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'block_r', 'q', 'voutp', 'ignore_dc', 'blocks' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'krnl_idct'.
+Command         create_rtl_model done; 0.29 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.55 seconds; current allocated memory: 258.948 MB.
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute         gen_rtl krnl_idct -istop -style xilinx -f -lang vhdl -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/vhdl/krnl_idct 
+Execute         gen_rtl krnl_idct -istop -style xilinx -f -lang vlog -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/verilog/krnl_idct 
+Execute         syn_report -csynth -model krnl_idct -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/krnl_idct_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model krnl_idct -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/krnl_idct_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model krnl_idct -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 2.8 sec.
+Execute         db_write -model krnl_idct -f -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.adb 
+Execute         db_write -model krnl_idct -bindview -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info krnl_idct -p /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct 
+Execute         export_constraint_db -f -tool general -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.constraint.tcl 
+Execute         syn_report -designview -model krnl_idct -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.design.xml 
+Command         syn_report done; 2.04 sec.
+Execute         syn_report -csynthDesign -model krnl_idct -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model krnl_idct -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model krnl_idct -o /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks krnl_idct 
+Execute         get_config_export -vivado_clock 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         sc_get_portdomain krnl_idct 
+INFO-FLOW: Model list for RTL component generation: krnl_idct_Pipeline_loop_rd_blocks krnl_idct_Pipeline_loop_rd_blocks1 execute krnl_idct_Pipeline_loop_wr_blocks krnl_idct
+INFO-FLOW: Handling components in module [krnl_idct_Pipeline_loop_rd_blocks] ... 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks.compgen.tcl 
+INFO-FLOW: Handling components in module [krnl_idct_Pipeline_loop_rd_blocks1] ... 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1.compgen.tcl 
+INFO-FLOW: Found component krnl_idct_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model krnl_idct_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [execute] ... 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute.compgen.tcl 
+INFO-FLOW: Found component krnl_idct_mul_32s_11ns_32_2_1.
+INFO-FLOW: Append model krnl_idct_mul_32s_11ns_32_2_1
+INFO-FLOW: Found component krnl_idct_mul_32s_13ns_32_2_1.
+INFO-FLOW: Append model krnl_idct_mul_32s_13ns_32_2_1
+INFO-FLOW: Found component krnl_idct_mul_32s_13s_32_2_1.
+INFO-FLOW: Append model krnl_idct_mul_32s_13s_32_2_1
+INFO-FLOW: Found component krnl_idct_mul_32s_11s_32_2_1.
+INFO-FLOW: Append model krnl_idct_mul_32s_11s_32_2_1
+INFO-FLOW: Found component krnl_idct_mul_32s_12ns_32_2_1.
+INFO-FLOW: Append model krnl_idct_mul_32s_12ns_32_2_1
+INFO-FLOW: Found component krnl_idct_mul_32s_9ns_32_2_1.
+INFO-FLOW: Append model krnl_idct_mul_32s_9ns_32_2_1
+INFO-FLOW: Found component krnl_idct_mul_31s_9ns_32_2_1.
+INFO-FLOW: Append model krnl_idct_mul_31s_9ns_32_2_1
+INFO-FLOW: Found component krnl_idct_mul_mul_16s_16s_16_4_1.
+INFO-FLOW: Append model krnl_idct_mul_mul_16s_16s_16_4_1
+INFO-FLOW: Found component krnl_idct_mul_mul_16s_16ns_21_4_1.
+INFO-FLOW: Append model krnl_idct_mul_mul_16s_16ns_21_4_1
+INFO-FLOW: Found component krnl_idct_mul_mul_16ns_16s_32_4_1.
+INFO-FLOW: Append model krnl_idct_mul_mul_16ns_16s_32_4_1
+INFO-FLOW: Found component krnl_idct_am_addmul_27s_27s_11ns_27_4_1.
+INFO-FLOW: Append model krnl_idct_am_addmul_27s_27s_11ns_27_4_1
+INFO-FLOW: Found component krnl_idct_mac_muladd_27s_13s_27ns_27_4_1.
+INFO-FLOW: Append model krnl_idct_mac_muladd_27s_13s_27ns_27_4_1
+INFO-FLOW: Found component krnl_idct_mac_muladd_27s_11ns_27ns_27_4_1.
+INFO-FLOW: Append model krnl_idct_mac_muladd_27s_11ns_27ns_27_4_1
+INFO-FLOW: Found component krnl_idct_ama_addmuladd_24s_24s_10ns_3ns_32_4_1.
+INFO-FLOW: Append model krnl_idct_ama_addmuladd_24s_24s_10ns_3ns_32_4_1
+INFO-FLOW: Found component krnl_idct_am_addmul_24s_24s_12ns_32_4_1.
+INFO-FLOW: Append model krnl_idct_am_addmul_24s_24s_12ns_32_4_1
+INFO-FLOW: Found component krnl_idct_ama_addmuladd_24s_24s_11ns_3ns_30_4_1.
+INFO-FLOW: Append model krnl_idct_ama_addmuladd_24s_24s_11ns_3ns_30_4_1
+INFO-FLOW: Found component krnl_idct_mac_muladd_24s_12ns_32ns_32_4_1.
+INFO-FLOW: Append model krnl_idct_mac_muladd_24s_12ns_32ns_32_4_1
+INFO-FLOW: Found component krnl_idct_mac_muladd_24s_13s_32ns_32_4_1.
+INFO-FLOW: Append model krnl_idct_mac_muladd_24s_13s_32ns_32_4_1
+INFO-FLOW: Found component krnl_idct_mac_muladd_24s_11s_32ns_32_4_1.
+INFO-FLOW: Append model krnl_idct_mac_muladd_24s_11s_32ns_32_4_1
+INFO-FLOW: Found component krnl_idct_mac_muladd_24s_13s_30ns_30_4_1.
+INFO-FLOW: Append model krnl_idct_mac_muladd_24s_13s_30ns_30_4_1
+INFO-FLOW: Found component krnl_idct_mac_muladd_24s_11ns_30ns_30_4_1.
+INFO-FLOW: Append model krnl_idct_mac_muladd_24s_11ns_30ns_30_4_1
+INFO-FLOW: Found component krnl_idct_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model krnl_idct_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [krnl_idct_Pipeline_loop_wr_blocks] ... 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks.compgen.tcl 
+INFO-FLOW: Found component krnl_idct_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model krnl_idct_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [krnl_idct] ... 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.compgen.tcl 
+INFO-FLOW: Found component krnl_idct_fifo_w512_d512_A.
+INFO-FLOW: Append model krnl_idct_fifo_w512_d512_A
+INFO-FLOW: Found component krnl_idct_fifo_w512_d2_S.
+INFO-FLOW: Append model krnl_idct_fifo_w512_d2_S
+INFO-FLOW: Found component krnl_idct_fifo_w512_d512_A.
+INFO-FLOW: Append model krnl_idct_fifo_w512_d512_A
+INFO-FLOW: Found component krnl_idct_control_s_axi.
+INFO-FLOW: Append model krnl_idct_control_s_axi
+INFO-FLOW: Found component krnl_idct_gmem0_m_axi.
+INFO-FLOW: Append model krnl_idct_gmem0_m_axi
+INFO-FLOW: Found component krnl_idct_gmem1_m_axi.
+INFO-FLOW: Append model krnl_idct_gmem1_m_axi
+INFO-FLOW: Found component krnl_idct_gmem2_m_axi.
+INFO-FLOW: Append model krnl_idct_gmem2_m_axi
+INFO-FLOW: Append model krnl_idct_Pipeline_loop_rd_blocks
+INFO-FLOW: Append model krnl_idct_Pipeline_loop_rd_blocks1
+INFO-FLOW: Append model execute
+INFO-FLOW: Append model krnl_idct_Pipeline_loop_wr_blocks
+INFO-FLOW: Append model krnl_idct
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: krnl_idct_flow_control_loop_pipe_sequential_init krnl_idct_mul_32s_11ns_32_2_1 krnl_idct_mul_32s_13ns_32_2_1 krnl_idct_mul_32s_13s_32_2_1 krnl_idct_mul_32s_11s_32_2_1 krnl_idct_mul_32s_12ns_32_2_1 krnl_idct_mul_32s_9ns_32_2_1 krnl_idct_mul_31s_9ns_32_2_1 krnl_idct_mul_mul_16s_16s_16_4_1 krnl_idct_mul_mul_16s_16ns_21_4_1 krnl_idct_mul_mul_16ns_16s_32_4_1 krnl_idct_am_addmul_27s_27s_11ns_27_4_1 krnl_idct_mac_muladd_27s_13s_27ns_27_4_1 krnl_idct_mac_muladd_27s_11ns_27ns_27_4_1 krnl_idct_ama_addmuladd_24s_24s_10ns_3ns_32_4_1 krnl_idct_am_addmul_24s_24s_12ns_32_4_1 krnl_idct_ama_addmuladd_24s_24s_11ns_3ns_30_4_1 krnl_idct_mac_muladd_24s_12ns_32ns_32_4_1 krnl_idct_mac_muladd_24s_13s_32ns_32_4_1 krnl_idct_mac_muladd_24s_11s_32ns_32_4_1 krnl_idct_mac_muladd_24s_13s_30ns_30_4_1 krnl_idct_mac_muladd_24s_11ns_30ns_30_4_1 krnl_idct_flow_control_loop_pipe_sequential_init krnl_idct_flow_control_loop_pipe_sequential_init krnl_idct_fifo_w512_d512_A krnl_idct_fifo_w512_d2_S krnl_idct_fifo_w512_d512_A krnl_idct_control_s_axi krnl_idct_gmem0_m_axi krnl_idct_gmem1_m_axi krnl_idct_gmem2_m_axi krnl_idct_Pipeline_loop_rd_blocks krnl_idct_Pipeline_loop_rd_blocks1 execute krnl_idct_Pipeline_loop_wr_blocks krnl_idct
+INFO-FLOW: Generating /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model krnl_idct_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model krnl_idct_mul_32s_11ns_32_2_1
+INFO-FLOW: To file: write model krnl_idct_mul_32s_13ns_32_2_1
+INFO-FLOW: To file: write model krnl_idct_mul_32s_13s_32_2_1
+INFO-FLOW: To file: write model krnl_idct_mul_32s_11s_32_2_1
+INFO-FLOW: To file: write model krnl_idct_mul_32s_12ns_32_2_1
+INFO-FLOW: To file: write model krnl_idct_mul_32s_9ns_32_2_1
+INFO-FLOW: To file: write model krnl_idct_mul_31s_9ns_32_2_1
+INFO-FLOW: To file: write model krnl_idct_mul_mul_16s_16s_16_4_1
+INFO-FLOW: To file: write model krnl_idct_mul_mul_16s_16ns_21_4_1
+INFO-FLOW: To file: write model krnl_idct_mul_mul_16ns_16s_32_4_1
+INFO-FLOW: To file: write model krnl_idct_am_addmul_27s_27s_11ns_27_4_1
+INFO-FLOW: To file: write model krnl_idct_mac_muladd_27s_13s_27ns_27_4_1
+INFO-FLOW: To file: write model krnl_idct_mac_muladd_27s_11ns_27ns_27_4_1
+INFO-FLOW: To file: write model krnl_idct_ama_addmuladd_24s_24s_10ns_3ns_32_4_1
+INFO-FLOW: To file: write model krnl_idct_am_addmul_24s_24s_12ns_32_4_1
+INFO-FLOW: To file: write model krnl_idct_ama_addmuladd_24s_24s_11ns_3ns_30_4_1
+INFO-FLOW: To file: write model krnl_idct_mac_muladd_24s_12ns_32ns_32_4_1
+INFO-FLOW: To file: write model krnl_idct_mac_muladd_24s_13s_32ns_32_4_1
+INFO-FLOW: To file: write model krnl_idct_mac_muladd_24s_11s_32ns_32_4_1
+INFO-FLOW: To file: write model krnl_idct_mac_muladd_24s_13s_30ns_30_4_1
+INFO-FLOW: To file: write model krnl_idct_mac_muladd_24s_11ns_30ns_30_4_1
+INFO-FLOW: To file: write model krnl_idct_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model krnl_idct_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model krnl_idct_fifo_w512_d512_A
+INFO-FLOW: To file: write model krnl_idct_fifo_w512_d2_S
+INFO-FLOW: To file: write model krnl_idct_fifo_w512_d512_A
+INFO-FLOW: To file: write model krnl_idct_control_s_axi
+INFO-FLOW: To file: write model krnl_idct_gmem0_m_axi
+INFO-FLOW: To file: write model krnl_idct_gmem1_m_axi
+INFO-FLOW: To file: write model krnl_idct_gmem2_m_axi
+INFO-FLOW: To file: write model krnl_idct_Pipeline_loop_rd_blocks
+INFO-FLOW: To file: write model krnl_idct_Pipeline_loop_rd_blocks1
+INFO-FLOW: To file: write model execute
+INFO-FLOW: To file: write model krnl_idct_Pipeline_loop_wr_blocks
+INFO-FLOW: To file: write model krnl_idct
+INFO-FLOW: Generating /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+Execute         get_top 
+Execute         get_config_export -ipname 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/common.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/op.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command         ap_source done; 0.12 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=4.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/vhdl' dstVlogDir='/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/vlog' tclDir='/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db' modelList='krnl_idct_flow_control_loop_pipe_sequential_init
+krnl_idct_mul_32s_11ns_32_2_1
+krnl_idct_mul_32s_13ns_32_2_1
+krnl_idct_mul_32s_13s_32_2_1
+krnl_idct_mul_32s_11s_32_2_1
+krnl_idct_mul_32s_12ns_32_2_1
+krnl_idct_mul_32s_9ns_32_2_1
+krnl_idct_mul_31s_9ns_32_2_1
+krnl_idct_mul_mul_16s_16s_16_4_1
+krnl_idct_mul_mul_16s_16ns_21_4_1
+krnl_idct_mul_mul_16ns_16s_32_4_1
+krnl_idct_am_addmul_27s_27s_11ns_27_4_1
+krnl_idct_mac_muladd_27s_13s_27ns_27_4_1
+krnl_idct_mac_muladd_27s_11ns_27ns_27_4_1
+krnl_idct_ama_addmuladd_24s_24s_10ns_3ns_32_4_1
+krnl_idct_am_addmul_24s_24s_12ns_32_4_1
+krnl_idct_ama_addmuladd_24s_24s_11ns_3ns_30_4_1
+krnl_idct_mac_muladd_24s_12ns_32ns_32_4_1
+krnl_idct_mac_muladd_24s_13s_32ns_32_4_1
+krnl_idct_mac_muladd_24s_11s_32ns_32_4_1
+krnl_idct_mac_muladd_24s_13s_30ns_30_4_1
+krnl_idct_mac_muladd_24s_11ns_30ns_30_4_1
+krnl_idct_flow_control_loop_pipe_sequential_init
+krnl_idct_flow_control_loop_pipe_sequential_init
+krnl_idct_fifo_w512_d512_A
+krnl_idct_fifo_w512_d2_S
+krnl_idct_fifo_w512_d512_A
+krnl_idct_control_s_axi
+krnl_idct_gmem0_m_axi
+krnl_idct_gmem1_m_axi
+krnl_idct_gmem2_m_axi
+krnl_idct_Pipeline_loop_rd_blocks
+krnl_idct_Pipeline_loop_rd_blocks1
+execute
+krnl_idct_Pipeline_loop_wr_blocks
+krnl_idct
+' expOnly='0'
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks.compgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1.compgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute.compgen.tcl 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Command         ap_source done; 0.14 sec.
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks.compgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.compgen.tcl 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'iblock_U(krnl_idct_fifo_w512_d512_A)' using Vivado Default RAMs.
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'iq_U(krnl_idct_fifo_w512_d2_S)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'ivoutp_U(krnl_idct_fifo_w512_d512_A)' using Vivado Default RAMs.
+Execute           source ./control.slave.tcl 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Command         ap_source done; 0.17 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 5.56 seconds. CPU system time: 0.06 seconds. Elapsed time: 5.63 seconds; current allocated memory: 264.708 MB.
+INFO-FLOW: DBG:PROC: ::AP::create_csynth_xml outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+Execute         get_config_op mul -impl 
+Execute         get_config_op mul -latency 
+Execute         get_config_op mul -precision 
+Execute         get_config_op add -impl 
+Execute         get_config_op add -latency 
+Execute         get_config_op add -precision 
+Execute         get_config_op sub -impl 
+Execute         get_config_op sub -latency 
+Execute         get_config_op sub -precision 
+Execute         get_config_op fadd -impl 
+Execute         get_config_op fadd -latency 
+Execute         get_config_op fadd -precision 
+Execute         get_config_op fsub -impl 
+Execute         get_config_op fsub -latency 
+Execute         get_config_op fsub -precision 
+Execute         get_config_op fdiv -impl 
+Execute         get_config_op fdiv -latency 
+Execute         get_config_op fdiv -precision 
+Execute         get_config_op fexp -impl 
+Execute         get_config_op fexp -latency 
+Execute         get_config_op fexp -precision 
+Execute         get_config_op flog -impl 
+Execute         get_config_op flog -latency 
+Execute         get_config_op flog -precision 
+Execute         get_config_op fmul -impl 
+Execute         get_config_op fmul -latency 
+Execute         get_config_op fmul -precision 
+Execute         get_config_op frsqrt -impl 
+Execute         get_config_op frsqrt -latency 
+Execute         get_config_op frsqrt -precision 
+Execute         get_config_op frecip -impl 
+Execute         get_config_op frecip -latency 
+Execute         get_config_op frecip -precision 
+Execute         get_config_op fsqrt -impl 
+Execute         get_config_op fsqrt -latency 
+Execute         get_config_op fsqrt -precision 
+Execute         get_config_op dadd -impl 
+Execute         get_config_op dadd -latency 
+Execute         get_config_op dadd -precision 
+Execute         get_config_op dsub -impl 
+Execute         get_config_op dsub -latency 
+Execute         get_config_op dsub -precision 
+Execute         get_config_op ddiv -impl 
+Execute         get_config_op ddiv -latency 
+Execute         get_config_op ddiv -precision 
+Execute         get_config_op dexp -impl 
+Execute         get_config_op dexp -latency 
+Execute         get_config_op dexp -precision 
+Execute         get_config_op dlog -impl 
+Execute         get_config_op dlog -latency 
+Execute         get_config_op dlog -precision 
+Execute         get_config_op dmul -impl 
+Execute         get_config_op dmul -latency 
+Execute         get_config_op dmul -precision 
+Execute         get_config_op drsqrt -impl 
+Execute         get_config_op drsqrt -latency 
+Execute         get_config_op drsqrt -precision 
+Execute         get_config_op drecip -impl 
+Execute         get_config_op drecip -latency 
+Execute         get_config_op drecip -precision 
+Execute         get_config_op dsqrt -impl 
+Execute         get_config_op dsqrt -latency 
+Execute         get_config_op dsqrt -precision 
+Execute         get_config_op hadd -impl 
+Execute         get_config_op hadd -latency 
+Execute         get_config_op hadd -precision 
+Execute         get_config_op hsub -impl 
+Execute         get_config_op hsub -latency 
+Execute         get_config_op hsub -precision 
+Execute         get_config_op hdiv -impl 
+Execute         get_config_op hdiv -latency 
+Execute         get_config_op hdiv -precision 
+Execute         get_config_op hmul -impl 
+Execute         get_config_op hmul -latency 
+Execute         get_config_op hmul -precision 
+Execute         get_config_op hsqrt -impl 
+Execute         get_config_op hsqrt -latency 
+Execute         get_config_op hsqrt -precision 
+Execute         get_config_op facc -impl 
+Execute         get_config_op facc -latency 
+Execute         get_config_op facc -precision 
+Execute         get_config_op fmacc -impl 
+Execute         get_config_op fmacc -latency 
+Execute         get_config_op fmacc -precision 
+Execute         get_config_op fmadd -impl 
+Execute         get_config_op fmadd -latency 
+Execute         get_config_op fmadd -precision 
+Execute         get_config_storage fifo -auto_srl_max_bits 
+Execute         get_config_storage fifo -auto_srl_max_depth 
+Execute         get_config_storage fifo -impl 
+Execute         get_solution -flow_target 
+Execute         get_config_array_partition -complete_threshold 
+Execute         get_config_array_partition -throughput_driven 
+Execute         get_config_compile -enable_auto_rewind 
+Execute         get_config_compile -name_max_length 
+Execute         get_config_compile -no_signed_zeros 
+Execute         get_config_compile -pipeline_loops 
+Execute         get_config_compile -pipeline_style 
+Execute         get_config_compile -pragma_strict_mode 
+Execute         get_config_compile -pre_tcl 
+Execute         get_config_compile -unsafe_math_optimizations 
+Execute         get_config_dataflow -default_channel 
+Execute         get_config_dataflow -disable_fifo_sizing_opt 
+Execute         get_config_dataflow -fifo_depth 
+Execute         get_config_dataflow -override_user_fifo_depth 
+Execute         get_config_dataflow -scalar_fifo_depth 
+Execute         get_config_dataflow -start_fifo_depth 
+Execute         get_config_dataflow -strict_mode 
+Execute         get_config_dataflow -strict_stable_sync 
+Execute         get_config_dataflow -task_level_fifo_depth 
+Execute         get_config_debug -directory 
+Execute         get_config_debug -enable 
+Execute         get_config_export -description 
+Execute         get_config_export -disable_deadlock_detection 
+Execute         get_config_export -display_name 
+Execute         get_config_export -format 
+Execute         get_config_export -ip_xdc_file 
+Execute         get_config_export -ip_xdc_ooc_file 
+Execute         get_config_export -ipname 
+Execute         get_config_export -library 
+Execute         get_config_export -output 
+Execute         get_config_export -rtl 
+Execute         get_config_export -taxonomy 
+Execute         get_config_export -vendor 
+Execute         get_config_export -version 
+Execute         get_config_export -vivado_clock 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_max_timing_paths 
+Execute         get_config_export -vivado_optimization_level 
+Execute         get_config_export -vivado_pblock 
+Execute         get_config_export -vivado_phys_opt 
+Execute         get_config_export -vivado_report_level 
+Execute         get_config_export -vivado_synth_design_args 
+Execute         get_config_export -vivado_synth_strategy 
+Execute         get_config_interface -clock_enable 
+Execute         get_config_interface -default_slave_interface 
+Execute         get_config_interface -m_axi_addr64 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_interface -m_axi_auto_max_ports 
+Execute         get_config_interface -m_axi_buffer_impl 
+Execute         get_config_interface -m_axi_conservative_mode 
+Execute         get_config_interface -m_axi_flush_mode 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_offset 
+Execute         get_config_interface -register_io 
+Execute         get_config_interface -s_axilite_data64 
+Execute         get_config_interface -s_axilite_mailbox 
+Execute         get_config_interface -s_axilite_status_regs 
+Execute         get_config_interface -s_axilite_sw_reset 
+Execute         get_config_rtl -header 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -mult_keep_attribute 
+Execute         get_config_rtl -register_all_io 
+Execute         get_config_rtl -register_reset_num 
+Execute         get_config_rtl -reset 
+Execute         get_config_rtl -reset_async 
+Execute         get_config_rtl -reset_level 
+Execute         get_config_schedule -enable_dsp_full_reg 
+Execute         get_config_unroll -tripcount_threshold 
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:       create_csynth_xml wrote csynth_xml=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='krnl_idct_flow_control_loop_pipe_sequential_init
+krnl_idct_mul_32s_11ns_32_2_1
+krnl_idct_mul_32s_13ns_32_2_1
+krnl_idct_mul_32s_13s_32_2_1
+krnl_idct_mul_32s_11s_32_2_1
+krnl_idct_mul_32s_12ns_32_2_1
+krnl_idct_mul_32s_9ns_32_2_1
+krnl_idct_mul_31s_9ns_32_2_1
+krnl_idct_mul_mul_16s_16s_16_4_1
+krnl_idct_mul_mul_16s_16ns_21_4_1
+krnl_idct_mul_mul_16ns_16s_32_4_1
+krnl_idct_am_addmul_27s_27s_11ns_27_4_1
+krnl_idct_mac_muladd_27s_13s_27ns_27_4_1
+krnl_idct_mac_muladd_27s_11ns_27ns_27_4_1
+krnl_idct_ama_addmuladd_24s_24s_10ns_3ns_32_4_1
+krnl_idct_am_addmul_24s_24s_12ns_32_4_1
+krnl_idct_ama_addmuladd_24s_24s_11ns_3ns_30_4_1
+krnl_idct_mac_muladd_24s_12ns_32ns_32_4_1
+krnl_idct_mac_muladd_24s_13s_32ns_32_4_1
+krnl_idct_mac_muladd_24s_11s_32ns_32_4_1
+krnl_idct_mac_muladd_24s_13s_30ns_30_4_1
+krnl_idct_mac_muladd_24s_11ns_30ns_30_4_1
+krnl_idct_flow_control_loop_pipe_sequential_init
+krnl_idct_flow_control_loop_pipe_sequential_init
+krnl_idct_fifo_w512_d512_A
+krnl_idct_fifo_w512_d2_S
+krnl_idct_fifo_w512_d512_A
+krnl_idct_control_s_axi
+krnl_idct_gmem0_m_axi
+krnl_idct_gmem1_m_axi
+krnl_idct_gmem2_m_axi
+krnl_idct_Pipeline_loop_rd_blocks
+krnl_idct_Pipeline_loop_rd_blocks1
+execute
+krnl_idct_Pipeline_loop_wr_blocks
+krnl_idct
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute         get_solution -flow_target 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/top-io-be.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.compgen.dataonly.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.compgen.dataonly.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.compgen.dataonly.tcl 
+Execute         get_config_export -format 
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks.tbgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1.tbgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute.tbgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks.tbgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute         get_solution -flow_target 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -kernel_profile 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.constraint.tcl 
+Execute         sc_get_clocks krnl_idct 
+Execute         source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute         get_config_export -ip_xdc_file 
+Execute         get_config_export -ip_xdc_ooc_file 
+Execute         get_config_debug -directory 
+INFO-FLOW: DBG:PROC: ::AP::add_csynth_report_sections
+INFO-FLOW: DBG:PUTS:       update_csynth_reports json2reportxml
+Execute         send_msg_by_id INFO @200-1603@%s  and missed bursts 
+INFO: [HLS 200-1603] Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO-FLOW: DBG:PUTS:       update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:       update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.86 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.89 seconds; current allocated memory: 279.382 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for krnl_idct.
+INFO: [VLOG 209-307] Generating Verilog RTL for krnl_idct.
+Execute         syn_report -model krnl_idct -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 294.81 MHz
+Command       autosyn done; 36.55 sec.
+Command     csynth_design done; 50.78 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 47.62 seconds. CPU system time: 3.17 seconds. Elapsed time: 50.78 seconds; current allocated memory: 279.369 MB.
+Execute     export_design 
+INFO: [HLS 200-1510] Running: export_design 
+Execute       get_config_export -clock_margin 
+Execute       get_config_export -custom_script 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_export -driver_input_dir 
+Execute       get_config_export -format 
+Execute       get_config_export -ipname 
+Execute       get_config_export -library 
+Execute       get_config_export -output 
+Execute       get_config_export -qor_test 
+Execute       get_config_export -rtl 
+Execute       get_config_export -sim 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -use_ip 
+Execute       get_config_export -use_netlist 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -xo 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog -ipname krnl_idct
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -vivado_clock 
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_solution -flow_target 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute       get_solution -flow_target 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl
+Execute       source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=krnl_idct xml_exists=0
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       get_config_export -disable_deadlock_detection 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to krnl_idct
+Execute       get_solution -flow_target 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       kernel.xml check internal_kernel_xml(1)=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/kernel.internal.xml srclang=c top=krnl_idct
+INFO-FLOW: DBG:PUTS:       kernel.xml check proj_kernel_xml    (1)=/home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/../../../kernel.xml use_proj_kernel_xml=false
+INFO-FLOW: DBG:PUTS:       copy internal kernel.xml to project: /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/../../../kernel.xml
+INFO-FLOW: DBG:PUTS:       update_final_kernel_xml /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/../../../kernel.xml
+Execute       get_config_debug -enable 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+INFO-FLOW: DBG:PUTS: Updating /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/../../../kernel.xml with values: interrupt true debug true compileOptions {-g -I /home/centos/workspace/optimization_lab_kernels/src} name krnl_idct vlnv xilinx.com:hls:krnl_idct:1.0
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=8
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=true #modelList=36 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='true' modelList='krnl_idct_flow_control_loop_pipe_sequential_init
+krnl_idct_mul_32s_11ns_32_2_1
+krnl_idct_mul_32s_13ns_32_2_1
+krnl_idct_mul_32s_13s_32_2_1
+krnl_idct_mul_32s_11s_32_2_1
+krnl_idct_mul_32s_12ns_32_2_1
+krnl_idct_mul_32s_9ns_32_2_1
+krnl_idct_mul_31s_9ns_32_2_1
+krnl_idct_mul_mul_16s_16s_16_4_1
+krnl_idct_mul_mul_16s_16ns_21_4_1
+krnl_idct_mul_mul_16ns_16s_32_4_1
+krnl_idct_am_addmul_27s_27s_11ns_27_4_1
+krnl_idct_mac_muladd_27s_13s_27ns_27_4_1
+krnl_idct_mac_muladd_27s_11ns_27ns_27_4_1
+krnl_idct_ama_addmuladd_24s_24s_10ns_3ns_32_4_1
+krnl_idct_am_addmul_24s_24s_12ns_32_4_1
+krnl_idct_ama_addmuladd_24s_24s_11ns_3ns_30_4_1
+krnl_idct_mac_muladd_24s_12ns_32ns_32_4_1
+krnl_idct_mac_muladd_24s_13s_32ns_32_4_1
+krnl_idct_mac_muladd_24s_11s_32ns_32_4_1
+krnl_idct_mac_muladd_24s_13s_30ns_30_4_1
+krnl_idct_mac_muladd_24s_11ns_30ns_30_4_1
+krnl_idct_flow_control_loop_pipe_sequential_init
+krnl_idct_flow_control_loop_pipe_sequential_init
+krnl_idct_fifo_w512_d512_A
+krnl_idct_fifo_w512_d2_S
+krnl_idct_fifo_w512_d512_A
+krnl_idct_control_s_axi
+krnl_idct_gmem0_m_axi
+krnl_idct_gmem1_m_axi
+krnl_idct_gmem2_m_axi
+krnl_idct_Pipeline_loop_rd_blocks
+krnl_idct_Pipeline_loop_rd_blocks1
+execute
+krnl_idct_Pipeline_loop_wr_blocks
+krnl_idct
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       get_solution -flow_target 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/top-io-be.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.compgen.dataonly.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.compgen.dataonly.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_rd_blocks1.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/execute.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct_Pipeline_loop_wr_blocks.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.constraint.tcl 
+Execute       sc_get_clocks krnl_idct 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_debug -directory 
+Execute       get_config_export -disable_deadlock_detection 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to krnl_idct
+INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/driver
+Execute       get_config_export -format 
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=true is_sdsoc=true xo_file=
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.compgen.dataonly.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.compgen.dataonly.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=krnl_idct
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.rtl_wrap.cfg.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_export -ip_xdc_file 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_ipi_example_script
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.constraint.tcl 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl
+Execute       source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+INFO-FLOW: DBG:PUTS:     IP package: exec /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/impl/ip/pack.sh
+INFO-FLOW: DBG:PUTS:     IP package: success /home/centos/workspace/optimization_lab_kernels/Emulation-HW/build/krnl_idct/krnl_idct/krnl_idct/solution/impl/ip/pack.sh
+Execute       get_config_export -output 
+Execute       send_msg_by_id INFO @200-802@%s krnl_idct/solution/impl/export.zip 
+INFO: [HLS 200-802] Generated output file krnl_idct/solution/impl/export.zip
+Command     export_design done; 24.56 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 22.12 seconds. CPU system time: 1.93 seconds. Elapsed time: 24.56 seconds; current allocated memory: 284.533 MB.
+Execute     close_project 
+Execute       cleanup_all -project 
+Execute     cleanup_all 
